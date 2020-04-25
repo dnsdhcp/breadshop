@@ -1,6 +1,5 @@
 html{
    font-size: 28px; 
-   height: 100%;
    min-width: 1520px;
 }
 body{
@@ -8,22 +7,50 @@ body{
     height: 100%;
     padding:0px 0px 0px 0px;
     margin: 0;
-    overflow-x: hidden;
 }
-.headimage{
-    position: relative;
-    top: -77px;
-    left: 0;
-    width:100%;
-    max-height: 258px;
-    background-position: center 0;
-    background-repeat: no-repeat;
-    background-attachment:fixed;
-    background-size: cover;
-    -webkit-background-size: cover;/* 兼容Webkit內核瀏覽器如Chrome和Safari */
-    -o-background-size: cover;/* 兼容Opera */  
-    zoom: 1;
+.main_view{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 20%;
+    top: 72px;
+    left: 0px;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 3%;
 }
+.main_view_img{
+    width: 100vw;
+    min-width: 1520px;
+    max-height: 100%;
+    min-height: 237px;
+}
+.main_view_context{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6% 0px;
+}
+.main_view_context_title{
+    margin-bottom: 0;
+    font-size: 32px;
+    line-height: 0px;
+    color:white;
+}
+.main_view_context_line{
+    width: 160px;
+    height: 2px;
+    background-color: white;
+    margin-top: 15%;
+    margin-bottom: 10px;
+}
+.main_view_context_subtitle{
+    color: white;
+    font-size: 28px;
+}
+
+
 .merchandise{
     position: relative;
     display: flex;
