@@ -44,7 +44,7 @@ body{
     height: 100px;
 }
 .about_text_content {
-    font-size: 22px;
+    font-size: 0.8rem;
 }
 .about_text_tile{
     text-align: center;
