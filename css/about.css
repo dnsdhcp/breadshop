@@ -1,5 +1,30 @@
+.headimage{
+    top:0;
+    left:0;
+    height:248px;
+    width:100%;
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-size: cover;
+    -webkit-background-size: cover;/* 兼容Webkit內核瀏覽器如Chrome和Safari */
+    -o-background-size: cover;/* 兼容Opera */
+    zoom: 1;
+}
 
-
+.row{
+    display: flex;
+    flex-direction: row;
+}
+.col{
+    padding-left: 1%;
+}
+.about_text_content{
+    font-size: large;
+}
+.about_title{
+    text-align: center;
+}
 .about_title_img{
     width: 950px;
     height: 500px;
