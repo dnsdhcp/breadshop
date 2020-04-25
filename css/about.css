@@ -3,6 +3,7 @@
     top: -72px;
     left: 0;
     width:100%;
+    height: 100%;
     background-position: center 0;
     background-repeat: no-repeat;
     background-attachment:fixed;
@@ -10,11 +11,13 @@
     -webkit-background-size: cover;/* 兼容Webkit內核瀏覽器如Chrome和Safari */
     -o-background-size: cover;/* 兼容Opera */
     zoom: 1;
+
 }
 html{
     font-size: 28px; 
-    height: 100%;
+    height: 960px;
     min-width: 1520px;
+    overflow-x: hidden;
  }
 body{
     width: auto;
@@ -23,7 +26,7 @@ body{
     margin: 0;
 }
 .container{
-    top: -72px;
+    position: re;
 }
 .head_img{
    height: 360px;
@@ -42,7 +45,7 @@ body{
     height: 100px;
 }
 .about_text_content {
-    font-size: 22px;
+    font-size: 0.7rem;
 }
 .about_text_tile{
     text-align: center;

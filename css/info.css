@@ -4,10 +4,7 @@ body{
     min-width: 1500px;
     width: auto;
     min-height: 732px;
-    background-image: url(https://i.imgur.com/7hGL6os.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    margin: 0px;
 }
 header{
     position:fixed;
@@ -106,16 +103,17 @@ li{
 }
 .main_view_context_title{
     font-size: 32px;
-    color: black;
+    color:white;
 }
 .main_view_context_line{
     width: 240px;
     height: 2px;
-    background-color: #000000;
+    background-color: white;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 .main_view_context_subtitle{
+    color: white;
     font-size: 28px;
 }
 
