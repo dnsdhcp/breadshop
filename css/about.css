@@ -17,6 +17,7 @@ html{
     font-size: 28px; 
     height: 960px;
     min-width: 1520px;
+    overflow-x: hidden;
  }
 body{
     width: auto;
