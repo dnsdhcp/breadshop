@@ -3,10 +3,7 @@ body{
     min-width: 1500px;
     width: auto;
     min-height: 732px;
-    background-image: url(https://i.imgur.com/BBlEl7k.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    margin: 0;
 }
 .main_window{
     position:absolute;
@@ -20,9 +17,18 @@ body{
     left: 0px;
 }
 .main{
-    width: 100vw;
-    height: 100vh;
-    min-width: 1920px;
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-size: cover;
+    -webkit-background-size: cover;/* 兼容Webkit內核瀏覽器如Chrome和Safari */
+    -o-background-size: cover;/* 兼容Opera */
+    zoom: 1;
 }
 .logo{
     padding-top: 10px;
