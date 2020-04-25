@@ -11,6 +11,7 @@ body{
 }
 
 
+
 header{
     position:fixed;
     top: 0px;
@@ -102,9 +103,11 @@ li{
     padding-right: 24px;
     display: none;
 }
-@media only screen and (min-width:350px) {
+@media only screen and (min-width:400px) {
     .social_image { display: block; }
   }
+
+
 .main_window{
     position:absolute;
     display: flex;
