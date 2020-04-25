@@ -18,6 +18,8 @@
 }
 .col{
     padding-left: 1%;
+    min-width: 50%;
+    max-width: 50%;
 }
 .about_text_content{
     font-size: large;
