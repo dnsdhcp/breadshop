@@ -8,10 +8,11 @@ body{
     height: 100%;
     padding:0px 0px 0px 0px;
     margin: 0;
+    overflow-x: hidden;
 }
 .headimage{
     position: relative;
-    top: -72px;
+    top: -77px;
     left: 0;
     width:100%;
     max-height: 258px;
@@ -20,14 +21,17 @@ body{
     background-attachment:fixed;
     background-size: cover;
     -webkit-background-size: cover;/* 兼容Webkit內核瀏覽器如Chrome和Safari */
-    -o-background-size: cover;/* 兼容Opera */
+    -o-background-size: cover;/* 兼容Opera */  
     zoom: 1;
 }
 .merchandise{
+    position: relative;
     display: flex;
+    width: 1360px;
     flex-direction: column;
-    align-items: center;
     justify-content: start;
+    top:20px;
+    left: 5.2%;
 }
 
 .broadcast{
@@ -36,6 +40,47 @@ body{
     font-size: 16px;
     font-family:Mixfont;
     top: 20px;
-    width: 1200px;
+    left: 0%;
     line-height: 2px;
+}
+.merchandise_list{
+    position: relative;
+    font-family: Arial;
+    font-size: 1rem;
+    font-weight: bold;
+    color: gray;
+    font-size: 16px;
+    width: 100%;
+    top:49px;
+}
+.line{
+    position: relative;
+    top: 10px;
+    left: 0%;
+    width: 100%;
+    border: 1px;
+    border-color: black;
+}
+.product{
+    position: relative;
+    left: 5.2%;
+}
+.product_imformation{
+
+}
+#ul{
+    position: relative;
+    font-size: 16px;
+    margin: 0em;
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+    left: 0%;
+}
+#li{
+    left: 700px;
+}
+.aaaa{
+    display: flex;
 }
