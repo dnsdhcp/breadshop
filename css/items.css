@@ -26,6 +26,7 @@ body{
     min-height: 237px;
 }
 .main_view_context{
+    height: 100%;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -34,9 +35,10 @@ body{
 }
 .main_view_context_title{
     margin-bottom: 0;
-    font-size: 32px;
+    font-size: 28px;
     line-height: 0px;
     color:white;
+    font-weight: bold;
 }
 .main_view_context_line{
     width: 160px;
@@ -102,6 +104,21 @@ body{
     position: relative;
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
+.product_title{
+    width: 100%;
+    text-align: left;
+    margin-top: 10px;
+    font-family: Arial, "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "Microsoft JhengHei", "맑은 고딕", sans-serif;
+    font-weight: bold;
+}
+.product_content{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "Microsoft JhengHei", "맑은 고딕", sans-serif;
+    justify-content: space-around;
+    text-align: left;
+}
 .product_imformation{
 
 }
@@ -116,7 +133,7 @@ body{
     left: 0%;
 }
 #li{
-    left: 700px;
+    width: 100%;
 }
 .aaaa{
     display: flex;
