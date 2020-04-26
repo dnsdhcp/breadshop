@@ -12,6 +12,7 @@ header{
     background-color:rgba(0,0,0,0.5);
     z-index: 10;
 }
+
 .title{
     width: 17%;
 }
@@ -60,10 +61,13 @@ li{
   @media only screen and (min-width:465px) {
     .b4 { display: block; }
   }
+  @media only screen and () {
+    .b1 { display: block; }
+  }
 .shopnamep{
     max-height: 80px;
     color: white;
-    font-family: Arial;
+    font-family: Arial, "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "Microsoft JhengHei", "맑은 고딕", sans-serif;
     margin: 0em;
     font-size: 16px;
     font-weight: bold;
