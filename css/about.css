@@ -53,18 +53,20 @@ body{
     padding:0px 0px 0px 0px;
     margin: 0;
 }
-.container{
-    position: re;
-}
 .row{
     display: flex;
     flex-direction: row;
-    height: 60vh;
+    height: 70%;
     width: 80vw;
 }
 .col{
     min-width: 50%;
     max-width: 50%;
+}
+.about{
+    display: flex; 
+    justify-content: center;
+    height: 420px;
 }
 .about_text{
     padding: 1%;
