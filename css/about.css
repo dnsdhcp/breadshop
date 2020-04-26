@@ -55,7 +55,6 @@ body{
     margin: 0;
 }
 .container{
-    height: 70%;
 }
 .row{
     display: flex;
