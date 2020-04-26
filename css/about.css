@@ -50,8 +50,12 @@ html{
 body{
     width: auto;
     height: 100%;
+    min-height :1200px;
     padding:0px 0px 0px 0px;
     margin: 0;
+}
+.container{
+    height: 70%;
 }
 .row{
     display: flex;
@@ -66,11 +70,9 @@ body{
 .about{
     display: flex; 
     justify-content: center;
-    height: 420px;
 }
 .about_text{
     padding: 1%;
-    height: 100px;
 }
 .about_text_content {
     font-size: 16px;
