@@ -12,6 +12,7 @@ header{
     background-color:rgba(0,0,0,0.5);
     z-index: 10;
 }
+
 .title{
     width: 17%;
 }
@@ -66,7 +67,7 @@ li{
 .shopnamep{
     max-height: 80px;
     color: white;
-    font-family: Arial;
+    font-family: Arial, "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "Microsoft JhengHei", "맑은 고딕", sans-serif;
     margin: 0em;
     font-size: 16px;
     font-weight: bold;
