@@ -1,6 +1,7 @@
 html{
    font-size: 28px; 
    min-width: 1520px;
+   overflow-x: hidden;
 }
 body{
     width: auto;
@@ -52,9 +53,6 @@ body{
     font-size: 28px;
 }
 
-
-
-
 .merchandise{
     position: relative;
     display: flex;
@@ -64,7 +62,9 @@ body{
     top:20px;
     left: 5.2%;
 }
-
+hr{
+    align-self: left;
+}
 .broadcast{
     color:  black;
     position: relative;
@@ -104,7 +104,7 @@ body{
 .product_items{
     display: flex;
     position: relative;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(2, 2, 2, 0.1);
 }
 .product_title{
     width: 100%;
@@ -134,9 +134,6 @@ body{
     width: 20%;
     left: 0%;
 }
-#li{
-    width: 100%;
-}
-.aaaa{
-    display: flex;
+p{
+    font-family: Arial, "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "Microsoft JhengHei", "맑은 고딕", sans-serif;
 }
