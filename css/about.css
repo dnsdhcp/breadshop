@@ -1,4 +1,4 @@
-.main_view{
+.main_view {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -7,107 +7,83 @@
     left: 0px;
     justify-content: flex-start;
     align-items: center;
-    padding-bottom: 3%;
+    padding-bottom: 1%;
 }
-.main_view_img{
+
+.main_view_img {
     width: 100vw;
     min-width: 1520px;
     max-height: 100%;
 }
-.main_view_context{
+
+.main_view_context {
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 30px 0px;
 }
-.main_view_context_title{
+
+.main_view_context_title {
     font-weight: bold;
     margin-top: 52.5%;
     margin-bottom: 0;
     font-size: 32px;
     line-height: 0px;
-    color:white;
+    color: white;
     font-family: Arial, "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "Microsoft JhengHei", "맑은 고딕", sans-serif;
 }
-.main_view_context_line{
+
+.main_view_context_line {
     width: 240px;
     height: 2px;
     background-color: white;
     margin-top: 10%;
     margin-bottom: 10px;
 }
-.main_view_context_subtitle{
+
+.main_view_context_subtitle {
     color: white;
     font-size: 28px;
 }
 
-
-html{
-    font-size: 28px; 
+html {
+    font-size: 28px;
     min-width: 1520px;
- }
-body{
+}
+
+body {
     width: auto;
     height: 100%;
-    min-height :1200px;
-    padding:0px 0px 0px 0px;
+    min-height: 1200px;
+    padding: 0px 0px 0px 0px;
     margin: 0;
 }
-.container{
+
+
+.text_tile {
+    text-align: center;
+    margin-bottom: 30px;
 }
-.row{
-    display: flex;
-    flex-direction: row;
-    height: 70%;
-    width: 80vw;
-}
-.col{
-    min-width: 50%;
-    max-width: 50%;
-}
-.about{
-    display: flex; 
-    justify-content: center;
-}
-.about_text{
-    padding: 1%;
-}
+
 .about_text_content {
     font-size: 16px;
 }
-.about_text_tile{
-    text-align: center;
-}
-.about_text_tile h2{
-    margin: 0;
+
+.about_describe_img {
+    float: left;
+    height: 300px;
+    width: 300px;
+    padding-right: 10px;
 }
 
-.about_title_img{
-    padding-left: 1%;
-    width: 98%;
-    height: 60%;
+.winning_img {
+    width: 100%;
+    height: 250px;
 }
-.img_size{
-    min-width: 100%;
-    min-height: 100%;
-    max-width: 100%;
-    max-height: 100%;
+.footer-img{
+    margin-top: 45px;
 }
-.about_img{
-  margin-top: 5px;
-  width: 100%;
-  height: 40%;
-  display: flex;
-  flex-direction: row;
-}
-.about_img_item{
-    padding-left: 1%;
-    min-width: 32%;
-    min-height: 95%;
-    max-width: 32%;
-    max-height: 95%;
-}
-p{
+p {
     font-family: Arial, "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "Microsoft JhengHei", "맑은 고딕", sans-serif;
 }
