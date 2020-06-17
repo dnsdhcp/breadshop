@@ -5,6 +5,7 @@ body{
     width: auto;
     min-height: 732px;
     margin: 0px;
+    font-family: Arial, "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "Microsoft JhengHei", "맑은 고딕", sans-serif;
 }
 .main_view{
     display: flex;
@@ -109,19 +110,15 @@ body{
 .main_body_store_info_adress{
     width: 650px;
     height: 189px;
-    margin-top: 10px;
-    padding: 5px;
+    padding: 2px;
 }
 .main_body_store_info_adress_info{
     font-size: 20px;
     color: black;
-    padding: 5px;
 }
 .main_body_store_info_adress_text{
     font-size: 20px;
     color: black;
-    margin-top: 3px;
-    padding: 5px;
 }
 .main_body_store_line{
     width: 920px;
