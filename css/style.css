@@ -1,15 +1,15 @@
 body{
     padding:0px 0px 0px 0px;
-    min-width: 1500px;
+    /*min-width: 1500px;
+    min-height: 732px;*/
     width: auto;
-    min-height: 732px;
     margin: 0 auto;
-    background-image: url("../img/main.jpg");
+    /* background-image: url("../img/main.jpg");
     background-repeat: no-repeat;
     background-attachment:fixed;
-    background-size: cover;
+    background-size: cover; */
 }
-.main_window{
+/* .main_window{
     position:relative;
     display: flex;
     flex-direction: column;
@@ -20,7 +20,7 @@ body{
     top: 72px;
     left: 0px;
     z-index: 10;
-}
+} */
 .logo{
     padding-top: 10px;
     width: 100px;
