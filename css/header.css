@@ -1,22 +1,19 @@
+html{
+    width: 100%;
+}
 .navbar-brand img {
 	height: 50px;
 }
-
-@media (min-width: 768px) {
-/*nav選單*/
-	.navbar{
-	padding-left:50px!important;
-    padding-right:50px!important; 
-    }
-    .social{
-        margin-right: 10px;
-    }
+.nav-link{
+    font-size: 28px;
+    font-weight: bold;
+    font-family: Arial, "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "Microsoft JhengHei", "맑은 고딕", sans-serif;
+    text-align: center;
 }
 @media (min-width: 320px) {
-    /*nav選單*/
-        .navbar{
-        padding-left:30px!important;
-        padding-right:30px!important; 
+        .navbar-toggler-icon{
+            width:30px!important;
+            height:30px!important; 
         }
         .social{
             margin-right: 10px;
@@ -25,4 +22,20 @@
 .navbar-flex{
     display: flex;
     justify-content: space-around
+}
+.toTop-arrow {
+	width: 2.5rem;
+	height: 2.5rem;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	border-radius: 33%;
+	opacity: 0.6;
+	background: #000;
+	cursor: pointer;
+	position:fixed;
+	right: 1rem;
+	bottom: 1rem;
+    display: none;
+    z-index: 10000;
 }

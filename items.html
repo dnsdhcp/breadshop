@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="./img/icon.ico" type="image/x-icon" >
         <title>青青烘焙坊</title>
         <link rel="stylesheet" type="text/css" href="./css/items.css" >
-        <link rel="stylesheet" type="text/css" href="./css/header.css" >
-    </head>
-    <body>
-        <header>
-            <div class = title>
-                <a href="index.html"><img src="img/title.png" class=img_title></a>
-            </div>
-            <ul>
-                <li><a href="./about.html"><p class=shopnamep>關於我們</p></a></li>
-                <li><a href="#"><p class=shopnamep>門市商品</p></a></li>
-                <li><a href="./info.html"><p class=shopnamep>門市據點</p></a></li>
-                <li><a href="#"><p class=shopnamep>活動快訊</p></a></li>
-            </ul>
-            <div class = social>
-                <a href="https://www.instagram.com/?hl=zh-tw"><img src="img/Instagram.png" class=social_image></a>
-                <a href="https://www.facebook.com/"><img src="img/facebook.png" class=social_image></a>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="./css/header.css">
+        <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+        <button type="button" id="BackTop" style="display:scroll;position:fixed;bottom:10px;right:10px; z-index: 10;" href="#" title=""><i class="fas fa-arrow-up fa-3x"></i></button> 
+        <header >
+            <nav class="navbar navbar-expand-lg navbar-light " style="background-color:rgba(0,0,0);">
+                <a class="navbar-brand" href="./index.html"><img src="./img/title.png" alt=""></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="border-color: #F7F7F7;">
+                        <span class="navbar-toggler-icon" style="color:#F7F7F7;"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav navbar-flex" style="width: 100%;">
+                        <li class="nav-item"><a class="nav-link" href="./index.html" style="color:#F7F7F7">首頁</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./about.html" style="color:#F7F7F7">關於我們</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./items.html" style="color:#F7F7F7">門市商品</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./info.html" style="color:#F7F7F7">門市據點</a></li>
+                        </ul>
+                        <a href="https://www.facebook.com/"><i class="fab fa-facebook-square fa-3x social"></i></a>
+                        <a href="https://www.instagram.com/?hl=zh-tw"><i class="fab fa-instagram fa-3x"></i></a>
+                    </div>
+            </nav>
             </div>
         </header>
+    </head>
+    <body>
         <div class=main_view>
             <img src="./img/001-min.jpg" class=main_view_img>
             <div class=main_view_context>
@@ -30,216 +38,207 @@
                 <div class=main_view_context_line></div>
             </div>
         </div>
-        <div class= merchandise >
+        <div class= container >
+            <div class="row">
             <div class= broadcast >
-                <p>根據不同的性質活動，提供豐富的點心餐盒，多種組合自由搭配，方便又美味！</p><br>
-                <p>我們提供多種餐盒選擇搭配，若需要客製化餐盒，請來電洽詢。</p><br>
+                <p>根據不同的性質活動，提供豐富的點心餐盒，多種組合自由搭配，方便又美味！<br>
+                我們提供多種餐盒選擇搭配，若需要客製化餐盒，請來電洽詢。<br></p>
                 <strong>
                     <span style="color: rgb(192, 80, 77); font-size: 16px;"> 
-                    <p>■訂購蛋糕、餐盒、酒會餐點街需三個工作天，餐盒內容依實際出餐內容為主，單筆訂單最多兩個組合。</p><br>
-                    <p>■因響應政府限塑政策，本公司將不另行附送塑膠提袋。</p><br>
-                    <p>■餐盒及酒會茶點無法網路下單，若有需求請聯繫取餐門市0934426549</p>
+                    <p>■訂購蛋糕、餐盒、酒會餐點街需三個工作天，餐盒內容依實際出餐內容為主，單筆訂單最多兩個組合。<br>
+                    ■因響應政府限塑政策，本公司將不另行附送塑膠提袋。<br>
+                    ■餐盒及酒會茶點無法網路下單，若有需求請聯繫取餐門市0934426549</p>
                     </span>
                 </strong>
+            </div>
             </div>  
             <div class= merchandise_list>
-                <ul id= ul> 
-                    <li ><a href="#"><p>麵包</p></a></li>
-                    <li ><a href="#"><p>生日蛋糕</p></a></li>
+                <ul class="nav nav-tabs">
+                    <li style="padding: 10px;"><a href="#">生日蛋糕</a></li>
+                    <li style="padding: 10px;"><a href="#">麵包</a></li>
                 </ul>
             </div>
-            <div style="top: 50px; position: relative; "><hr style = " background: rgba(0, 0, 0, 0.1); " align = left size="1px"  ></div>
-            <div class ="product"  >
-                <div class = "product_items">
-                    <img src = "./img/items/雪白彩果.png" >
-                    <div style="display: flex; flex-direction:column;width:100% ;margin-left: 4%;">
-                        <t2 class="product_title">雪白彩果 Snow White Jewelry</t2>
-                        <div class = "product_content" style="display: flex; flex-direction: row; height: 100%; ">
-                            <div style="width: 50%;"> 
-                                <div style="height: 25%;">
-                                    <p style="font-size: 16px; width: 80%; margin: 0;"> 
-                                        一份出自夏先生的愛，利用香草做底，使用大量芋泥餡、布丁來自陪襯，最上層在鋪滿新鮮水果，整個蛋糕有著完美的搭配風味。
-                                    </p>
+            <div class="product" style="margin: 5%;">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <a Name="item1"></a>
+                            <img src="./img/items/雪白彩果.png" style="width: 100%;">
+                            <div class="row">
+                                <div class="col-md-12 col-lg-6">
+                                        <p style="font-size: 16px;margin: 0;"> 
+                                            一份出自夏先生的愛，利用香草做底，使用大量芋泥餡、布丁來自陪襯，最上層在鋪滿新鮮水果，整個蛋糕有著完美的搭配風味。
+                                        </p>
+                                        <span style="color:#ffffff; font-size: 16px; font-weight: bold;">
+                                            <span style="background-color:#ff6600;">規格說明</span>
+                                        </span>
+                                        <p style="font-size: 16px; margin-top: 5px;">
+                                            ．蛋糕體:香草蛋糕
+                                        <br>
+                                            ．夾餡:芋泥餡、布丁
+                                        <br>
+                                            ．保存期限:冷藏3天
+                                        <br>
+                                            ．葷素:蛋奶素
+                                        <br>
+                                            ．保存方式:冷藏
+                                        <br>
+                                            ．保存期限:冷藏3天內食用完畢
+                                        </p>
                                 </div>
-                                <div style="height: 75%;">
-                                    <span style="color:#ffffff; font-size: 16px; font-weight: bold;">
-                                        <span style="background-color:#ff6600;">規格說明</span>
-                                    </span>
-                                    <p style="font-size: 16px; margin-top: 5px;">
-                                        ．蛋糕體:香草蛋糕
-                                    <br>
-                                        ．夾餡:芋泥餡、布丁
-                                    <br>
-                                        ．保存期限:冷藏3天
-                                    <br>
-                                        ．葷素:蛋奶素
-                                    <br>
-                                        ．保存方式:冷藏
-                                    <br>
-                                        ．保存期限:冷藏3天內食用完畢
-                                    </p>
-                                </div>
-                            </div>
-                            <div style="width: 50%;display: flex;flex-direction: column;">
-                                <div style="width:100%;height: 20%;display: flex;">
-                                    <p style="margin:0;font-size: 16px;width: 16.7%;">單價</p>
-                                    <p style="margin:0;font-size: 16px;">$680</p>
-                                </div>                    
-                                <div style="width:100%;height: 20%;display: flex;">
-                                    <p style="margin:0;width: 20%;font-size: 16px;">蛋糕尺寸</p>
-                                    <form style="width:100%;font-size: 16px;margin-top: 0.5%;">
-                                        <select name="Size" style="width:70%;">
-                                        　<option value="8">8吋</option>
-                                        　<option value="10">10吋</option>
-                                        　<option value="12">12吋</option>
-                                        　<option value="14">14吋</option>
-                                        </select>
-                                    </form>
-                                </div>
-                                <div style="width:100%;height: 10%;display: flex;">
-                                    <p style="margin:0;width: 16.7%;font-size: 16px;">數量</p>
-                                    <input id="Num" type="number" name="Num" value="0" step="1" style="width:57.5%; height: 50%;margin-top: 0.5%;"> 
-                                </div>
-                                <div style="width:80%;height: 1px;background-color: black; margin-top: 6%; margin-bottom: 4%;"></div>
-                                <div style="width:100%;height: 39%; display: flex;">
-                                    <input type="button" value="直接購買" style="height: 60%; width: 30%; margin-top: 3%; margin-right: 20%;">
-                                    <input type="button" value="放入購物車" style="height: 60%; width: 30%; margin-top: 3%;">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class = "product_items">
-                    <img src = "./img/items/玫瑰馨.png" >
-                    <div style="display: flex; flex-direction:column;width:100%; margin-left:4%; ">
-                        <t2 class="product_title">玫瑰馨Rose Aroma</t2>
-                        <div class = "product_content" style="display: flex; flex-direction: row; height: 100%;">
-                            <div style="width: 50%;"> 
-                                <div style="height: 25%;">
-                                    <p style="font-size: 16px; width: 80%; margin: 0;"> 
-                                        夏先生把對青青的思念融入蛋糕裡，以蒸煮製成芋泥餡，紫芋濃郁香氣，讓蛋糕呈現最自然樸實的味道，以北海道奶霜營造純淨清爽感，給人「捨不得刮掉」的好吃感！
-                                    </p>
-                                </div>
-                                <div style="height: 75%;">
-                                    <span style="color:#ffffff; font-size: 16px; font-weight: bold;">
-                                        <span style="background-color:#ff6600;">規格說明</span>
-                                    </span>
-                                    <p style="font-size: 16px; margin-top: 5px;">
-                                        ．蛋糕體:香草蛋糕
-                                    <br>
-                                        ．夾餡:芋泥餡、布丁
-                                    <br>
-                                        ．保存期限:冷藏3天
-                                    <br>
-                                        ．葷素:蛋奶素
-                                    <br>
-                                        ．保存方式:冷藏
-                                    <br>
-                                        ．保存期限:冷藏3天內食用完畢
-                                    </p>
-                                </div>
-                            </div>
-                            <div style="width: 50%;display: flex;flex-direction: column;">
-                                <div style="width:100%;height: 20%;display: flex;">
-                                    <p style="margin:0;font-size: 16px;width: 16.7%;">單價</p>
-                                    <p style="margin:0;font-size: 16px;">$850</p>
-                                </div>                    
-                                <div style="width:100%;height: 20%;display: flex;">
-                                    <p style="margin:0;width: 20%;font-size: 16px;">蛋糕尺寸</p>
-                                    <form style="width:100%;font-size: 16px;margin-top: 0.5%;">
-                                        <select name="Size" style="width:70%;">
-                                        　<option value="6">6吋</option>
-                                        　<option value="8">8吋</option>
-                                        </select>
-                                    </form>
-                                </div>
-                                <div style="width:100%;height: 10%;display: flex;">
-                                    <p style="margin:0;width: 16.7%;font-size: 16px;">數量</p>
-                                    <input id="Num" type="number" name="Num" value="0" step="1" style="width:57.5%; height: 50%;margin-top: 0.5%;"> 
-                                </div>
-                                <div style="width:80%;height: 1px;background-color: black; margin-top: 6%; margin-bottom: 4%;"></div>
-                                <div style="width:100%;height: 39%; display: flex;">
-                                    <input type="button" value="直接購買" style="height: 60%; width: 30%; margin-top: 3%; margin-right: 20%;">
-                                    <input type="button" value="放入購物車" style="height: 60%; width: 30%; margin-top: 3%;">
+                                <div class="col-md-12 col-lg-6">
+                                    <div style="display: flex;flex-direction: column; padding-left: 3%;">
+                                        <div style="width:100%;height: 20%;display: flex;">
+                                            <p class ="itemPrice">單價</p>
+                                            <p style="margin:0;font-size: 16px;">$680</p>
+                                        </div>                    
+                                        <div style="width:100%;height: 20%;display: flex;">
+                                            <p class="itemPrice">蛋糕尺寸</p>
+                                            <form style="font-size: 16px;margin-top: 0.5%;">
+                                                <select name="Size" >
+                                                　<option value="8">8吋</option>
+                                                　<option value="10">10吋</option>
+                                                　<option value="12">12吋</option>
+                                                　<option value="14">14吋</option>
+                                                </select>
+                                            </form>
+                                        </div>
+                                        <div style="width:100%;height: 10%;display: flex;">
+                                            <p class="itemPrice">數量</p>
+                                            <input id="Num" type="number" name="Num" value="0" step="1" style="width:57.5%; height: 50%;margin-top: 0.5%;"> 
+                                        </div>
+                                        <div style="width:90%;height: 1px;background-color: black; margin: 6% 5% 4% 5%;"></div>
+                                        <div style="height: 39%; display: flex; margin: 0px 10% 10px 10%; flex-direction: row; justify-content: space-around;">
+                                            <input type="button" value="直接購買" style="height: 60%; "class="button">
+                                            <input type="button" value="放入購物車" style="height: 60%;" class="button">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
-                </div>
-                <div class = "product_items">
-                    <img src = "./img/items/夏日戀情.png" >
-                    <div style="display: flex; flex-direction:column;width:100%; margin-left:4%; ">
-                        <t2 class="product_title">夏日戀情Summer Romance</t2>
-                        <div class = "product_content" style="display: flex; flex-direction: row; height: 100%;">
-                            <div style="width: 50%;"> 
-                                <div style="height: 25%;">
-                                    <p style="font-size: 16px; width: 80%; margin: 0;"> 
-                                        夏先生以香草蛋糕為底，夾入一層新鮮水果及滑嫩手工布丁，在炎炎夏日吃上一口夏日戀情，充滿著青澀且濃郁的戀愛滋味。
-                                    </p>
+                    <div class="col-12">
+                        <div class="card">
+                            <a Name="item1"></a>
+                            <img src="./img/items/玫瑰馨.png" style="width: 100%;">
+                            <div class="row">
+                                <div class="col-md-12 col-lg-6">
+                                        <p style="font-size: 16px;margin: 0;"> 
+                                            夏先生把對青青的思念融入蛋糕裡，以蒸煮製成芋泥餡，紫芋濃郁香氣，讓蛋糕呈現最自然樸實的味道，以北海道奶霜營造純淨清爽感，給人「捨不得刮掉」的好吃感！
+                                        </p>
+                                        <span style="color:#ffffff; font-size: 16px; font-weight: bold;">
+                                            <span style="background-color:#ff6600;">規格說明</span>
+                                        </span>
+                                        <p style="font-size: 16px; margin-top: 5px;">
+                                            ．蛋糕體:香草蛋糕
+                                        <br>
+                                            ．夾餡:芋泥餡、布丁
+                                        <br>
+                                            ．保存期限:冷藏3天
+                                        <br>
+                                            ．葷素:蛋奶素
+                                        <br>
+                                            ．保存方式:冷藏
+                                        <br>
+                                            ．保存期限:冷藏3天內食用完畢
+                                        </p>
                                 </div>
-                                <div style="height: 75%;">
-                                    <span style="color:#ffffff; font-size: 16px; font-weight: bold;">
-                                        <span style="background-color:#ff6600;">規格說明</span>
-                                    </span>
-                                    <p style="font-size: 16px; margin-top: 5px;">
-                                        ．蛋糕體:香草蛋糕
-                                    <br>
-                                        ．夾餡:什錦水果、布丁
-                                    <br>
-                                        ．保存期限:冷藏3天
-                                    <br>
-                                        ．葷素:蛋奶素
-                                    <br>
-                                        ．保存方式:冷藏
-                                    <br>
-                                        ．保存期限:冷藏3天內食用完畢
-                                    </p>
-                                </div>
-                            </div>
-                            <div style="width: 50%;display: flex;flex-direction: column;">
-                                <div style="width:100%;height: 20%;display: flex;">
-                                    <p style="margin:0;font-size: 16px;width: 16.7%;">單價</p>
-                                    <p style="margin:0;font-size: 16px;">$790</p>
-                                </div>                    
-                                <div style="width:100%;height: 20%;display: flex;">
-                                    <p style="margin:0;width: 20%;font-size: 16px;">蛋糕尺寸</p>
-                                    <form style="width:100%;font-size: 16px;margin-top: 0.5%;">
-                                        <select name="Size" style="width:70%;">
-                                            　<option value="8">8吋</option>
-                                            　<option value="10">10吋</option>
-                                            　<option value="12">12吋</option>
-                                            　<option value="14">14吋</option>
-                                        </select>
-                                    </form>
-                                </div>
-                                <div style="width:100%;height: 10%;display: flex;">
-                                    <p style="margin:0;width: 16.7%;font-size: 16px;">數量</p>
-                                    <input id="Num" type="number" name="Num" value="0" step="1" style="width:57.5%; height: 50%;margin-top: 0.5%;"> 
-                                </div>
-                                <div style="width:80%;height: 1px;background-color: black; margin-top: 6%; margin-bottom: 4%;"></div>
-                                <div style="width:100%;height: 39%; display: flex;">
-                                    <input type="button" value="直接購買" style="height: 60%; width: 30%; margin-top: 3%; margin-right: 20%;">
-                                    <input type="button" value="放入購物車" style="height: 60%; width: 30%; margin-top: 3%;">
+                                <div class="col-md-12 col-lg-6">
+                                    <div style="display: flex;flex-direction: column; padding-left: 3%;">
+                                        <div style="width:100%;height: 20%;display: flex;">
+                                            <p class ="itemPrice">單價</p>
+                                            <p style="margin:0;font-size: 16px;">$850</p>
+                                        </div>                    
+                                        <div style="width:100%;height: 20%;display: flex;">
+                                            <p class="itemPrice">蛋糕尺寸</p>
+                                            <form style="font-size: 16px;margin-top: 0.5%;">
+                                                <select name="Size" >
+                                                　<option value="6">6吋</option>
+                                                　<option value="8">8吋</option>
+                                                </select>
+                                            </form>
+                                        </div>
+                                        <div style="width:100%;height: 10%;display: flex;">
+                                            <p class="itemPrice">數量</p>
+                                            <input id="Num" type="number" name="Num" value="0" step="1" style="width:57.5%; height: 50%;margin-top: 0.5%;"> 
+                                        </div>
+                                        <div style="width:90%;height: 1px;background-color: black; margin: 6% 5% 4% 5%;"></div>
+                                        <div style="height: 39%; display: flex; margin: 0px 10% 10px 10%; flex-direction: row; justify-content: space-around;">
+                                            <input type="button" value="直接購買" style="height: 60%; "class="button">
+                                            <input type="button" value="放入購物車" style="height: 60%;" class="button">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class ="product"  >
-                <div class = "product_items">
-                    <img src = "./img/items/富胖達.png" >
-                        <div style="display: flex; flex-direction:column;width:100%; margin-left:4%; ">
-                            <t2 class="product_title">富胖達Rich Panda</t2>
-                            <div class = "product_content" style="display: flex; flex-direction: row; height: 100%;">
-                                <div style="width: 50%;"> 
-                                    <div style="height: 25%;">
-                                        <p style="font-size: 16px; width: 80%; margin: 0;"> 
+                    <div class="col-12">
+                        <div class="card">
+                            <a Name="item1"></a>
+                            <img src="./img/items/夏日戀情.png" style="width: 100%;">
+                            <div class="row">
+                                <div class="col-md-12 col-lg-6">
+                                        <p style="font-size: 16px;margin: 0;"> 
+                                            夏先生以香草蛋糕為底，夾入一層新鮮水果及滑嫩手工布丁，在炎炎夏日吃上一口夏日戀情，充滿著青澀且濃郁的戀愛滋味。
+                                        </p>
+                                        <span style="color:#ffffff; font-size: 16px; font-weight: bold;">
+                                            <span style="background-color:#ff6600;">規格說明</span>
+                                        </span>
+                                        <p style="font-size: 16px; margin-top: 5px;">
+                                            ．蛋糕體:香草蛋糕
+                                        <br>
+                                            ．夾餡:什錦水果、布丁
+                                        <br>
+                                            ．保存期限:冷藏3天
+                                        <br>
+                                            ．葷素:蛋奶素
+                                        <br>
+                                            ．保存方式:冷藏
+                                        <br>
+                                            ．保存期限:冷藏3天內食用完畢
+                                        </p>
+                                </div>
+                                <div class="col-md-12 col-lg-6">
+                                    <div style="display: flex;flex-direction: column; padding-left: 3%;">
+                                        <div style="width:100%;height: 20%;display: flex;">
+                                            <p class ="itemPrice">單價</p>
+                                            <p style="margin:0;font-size: 16px;">$790</p>
+                                        </div>                    
+                                        <div style="width:100%;height: 20%;display: flex;">
+                                            <p class="itemPrice">蛋糕尺寸</p>
+                                            <form style="font-size: 16px;margin-top: 0.5%;">
+                                                <select name="Size" >
+                                                　<option value="8">8吋</option>
+                                                　<option value="10">10吋</option>
+                                                　<option value="12">12吋</option>
+                                                　<option value="14">14吋</option>
+                                                </select>
+                                            </form>
+                                        </div>
+                                        <div style="width:100%;height: 10%;display: flex;">
+                                            <p class="itemPrice">數量</p>
+                                            <input id="Num" type="number" name="Num" value="0" step="1" style="width:57.5%; height: 50%;margin-top: 0.5%;"> 
+                                        </div>
+                                        <div style="width:90%;height: 1px;background-color: black; margin: 6% 5% 4% 5%;"></div>
+                                        <div style="height: 39%; display: flex; margin: 0px 10% 10px 10%; flex-direction: row; justify-content: space-around;">
+                                            <input type="button" value="直接購買" style="height: 60%; "class="button">
+                                            <input type="button" value="放入購物車" style="height: 60%;" class="button">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="card">
+                            <a Name="item1"></a>
+                            <img src="./img/items/富胖達.png" style="width: 100%;">
+                            <div class="row">
+                                <div class="col-md-12 col-lg-6">
+                                        <p style="font-size: 16px;margin: 0;"> 
                                             夏先生與時下最流行的外送集團foodpandaa合作，打造出可愛的招牌吉祥物富胖達，用巧克力蛋糕做基底，加上滑嫩的布丁，讓你整個人都富胖起來!
                                         </p>
-                                    </div>
-                                    <div style="height: 75%;">
                                         <span style="color:#ffffff; font-size: 16px; font-weight: bold;">
                                             <span style="background-color:#ff6600;">規格說明</span>
                                         </span>
@@ -256,158 +255,158 @@
                                         <br>
                                             ．保存期限:冷藏3天內食用完畢
                                         </p>
-                                    </div>
                                 </div>
-                                <div style="width: 50%;display: flex;flex-direction: column;">
-                                    <div style="width:100%;height: 20%;display: flex;">
-                                        <p style="margin:0;font-size: 16px;width: 16.7%;">單價</p>
-                                        <p style="margin:0;font-size: 16px;">$850</p>
-                                    </div>                    
-                                    <div style="width:100%;height: 20%;display: flex;">
-                                        <p style="margin:0;width: 20%;font-size: 16px;">蛋糕尺寸</p>
-                                        <form style="width:100%;font-size: 16px;margin-top: 0.5%;">
-                                            <select name="Size" style="width:70%;">
+                                <div class="col-md-12 col-lg-6">
+                                    <div style="display: flex;flex-direction: column; padding-left: 3%;">
+                                        <div style="width:100%;height: 20%;display: flex;">
+                                            <p class ="itemPrice">單價</p>
+                                            <p style="margin:0;font-size: 16px;">$850</p>
+                                        </div>                    
+                                        <div style="width:100%;height: 20%;display: flex;">
+                                            <p class="itemPrice">蛋糕尺寸</p>
+                                            <form style="font-size: 16px;margin-top: 0.5%;">
+                                                <select name="Size" >
                                                 　<option value="8">8吋</option>
                                                 　<option value="10">10吋</option>
                                                 　<option value="12">12吋</option>
                                                 　<option value="14">14吋</option>
-                                            </select>
-                                        </form>
-                                    </div>
-                                    <div style="width:100%;height: 10%;display: flex;">
-                                        <p style="margin:0;width: 16.7%;font-size: 16px;">數量</p>
-                                        <input id="Num" type="number" name="Num" value="0" step="1" style="width:57.5%; height: 50%;margin-top: 0.5%;"> 
-                                    </div>
-                                    <div style="width:80%;height: 1px;background-color: black; margin-top: 6%; margin-bottom: 4%;"></div>
-                                    <div style="width:100%;height: 39%; display: flex;">
-                                        <input type="button" value="直接購買" style="height: 60%; width: 30%; margin-top: 3%; margin-right: 20%;">
-                                        <input type="button" value="放入購物車" style="height: 60%; width: 30%; margin-top: 3%;">
+                                                </select>
+                                            </form>
+                                        </div>
+                                        <div style="width:100%;height: 10%;display: flex;">
+                                            <p class="itemPrice">數量</p>
+                                            <input id="Num" type="number" name="Num" value="0" step="1" style="width:57.5%; height: 50%;margin-top: 0.5%;"> 
+                                        </div>
+                                        <div style="width:90%;height: 1px;background-color: black; margin: 6% 5% 4% 5%;"></div>
+                                        <div style="height: 39%; display: flex; margin: 0px 10% 10px 10%; flex-direction: row; justify-content: space-around;">
+                                            <input type="button" value="直接購買" style="height: 60%; "class="button">
+                                            <input type="button" value="放入購物車" style="height: 60%;" class="button">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                <div class = "product_items">
-                    <img src = "./img/items/森林之吻.png" >
-                    <div style="display: flex; flex-direction:column;width:100%; margin-left:4%; ">
-                        <t2 class="product_title">森林之吻Forest's Kiss</t2>
-                        <div class = "product_content" style="display: flex; flex-direction: row; height: 100%;">
-                            <div style="width: 50%;"> 
-                                <div style="height: 25%;">
-                                    <p style="font-size: 16px; width: 80%; margin: 0;"> 
-                                      夏先生利用巧克力的基底，淋上香氣迷人的巧克力糖漿，最上層在撲滿可口的馬卡龍，述說著他與青青濃厚且不可分離的愛情。
-                                    </p>
+                    <div class="col-12">
+                        <div class="card">
+                            <a Name="item1"></a>
+                            <img src="./img/items/森林之吻.png" style="width: 100%;">
+                            <div class="row">
+                                <div class="col-md-12 col-lg-6">
+                                        <p style="font-size: 16px;margin: 0;"> 
+                                            夏先生利用巧克力的基底，淋上香氣迷人的巧克力糖漿，最上層在撲滿可口的馬卡龍，述說著他與青青濃厚且不可分離的愛情。
+                                        </p>
+                                        <span style="color:#ffffff; font-size: 16px; font-weight: bold;">
+                                            <span style="background-color:#ff6600;">規格說明</span>
+                                        </span>
+                                        <p style="font-size: 16px; margin-top: 5px;">
+                                            ．蛋糕體:巧克力蛋糕
+                                        <br>
+                                            ．夾餡:什錦水果、布丁
+                                        <br>
+                                            ．保存期限:冷藏3天
+                                        <br>
+                                            ．葷素:蛋奶素
+                                        <br>
+                                            ．保存方式:冷藏
+                                        <br>
+                                            ．保存期限:冷藏3天內食用完畢
+                                        </p>
                                 </div>
-                                <div style="height: 75%;">
-                                    <span style="color:#ffffff; font-size: 16px; font-weight: bold;">
-                                        <span style="background-color:#ff6600;">規格說明</span>
-                                    </span>
-                                    <p style="font-size: 16px; margin-top: 5px;">
-                                        ．蛋糕體:巧克力蛋糕
-                                    <br>
-                                        ．夾餡:什錦水果、布丁
-                                    <br>
-                                        ．保存期限:冷藏3天
-                                    <br>
-                                        ．葷素:蛋奶素
-                                    <br>
-                                        ．保存方式:冷藏
-                                    <br>
-                                        ．保存期限:冷藏3天內食用完畢
-                                    </p>
-                                </div>
-                            </div>
-                            <div style="width: 50%;display: flex;flex-direction: column;">
-                                <div style="width:100%;height: 20%;display: flex;">
-                                    <p style="margin:0;font-size: 16px;width: 16.7%;">單價</p>
-                                    <p style="margin:0;font-size: 16px;">$790</p>
-                                </div>                    
-                                <div style="width:100%;height: 20%;display: flex;">
-                                    <p style="margin:0;width: 20%;font-size: 16px;">蛋糕尺寸</p>
-                                    <form style="width:100%;font-size: 16px;margin-top: 0.5%;">
-                                        <select name="Size" style="width:70%;">
-                                            　<option value="8">8吋</option>
-                                            　<option value="10">10吋</option>
-                                            　<option value="12">12吋</option>
-                                            　<option value="14">14吋</option>
-                                        </select>
-                                    </form>
-                                </div>
-                                <div style="width:100%;height: 10%;display: flex;">
-                                    <p style="margin:0;width: 16.7%;font-size: 16px;">數量</p>
-                                    <input id="Num" type="number" name="Num" value="0" step="1" style="width:57.5%; height: 50%;margin-top: 0.5%;"> 
-                                </div>
-                                <div style="width:80%;height: 1px;background-color: black; margin-top: 6%; margin-bottom: 4%;"></div>
-                                <div style="width:100%;height: 39%; display: flex;">
-                                    <input type="button" value="直接購買" style="height: 60%; width: 30%; margin-top: 3%; margin-right: 20%;">
-                                    <input type="button" value="放入購物車" style="height: 60%; width: 30%; margin-top: 3%;">
+                                <div class="col-md-12 col-lg-6">
+                                    <div style="display: flex;flex-direction: column; padding-left: 3%;">
+                                        <div style="width:100%;height: 20%;display: flex;">
+                                            <p class ="itemPrice">單價</p>
+                                            <p style="margin:0;font-size: 16px;">$790</p>
+                                        </div>                    
+                                        <div style="width:100%;height: 20%;display: flex;">
+                                            <p class="itemPrice">蛋糕尺寸</p>
+                                            <form style="font-size: 16px;margin-top: 0.5%;">
+                                                <select name="Size" >
+                                                　<option value="8">8吋</option>
+                                                　<option value="10">10吋</option>
+                                                　<option value="12">12吋</option>
+                                                　<option value="14">14吋</option>
+                                                </select>
+                                            </form>
+                                        </div>
+                                        <div style="width:100%;height: 10%;display: flex;">
+                                            <p class="itemPrice">數量</p>
+                                            <input id="Num" type="number" name="Num" value="0" step="1" style="width:57.5%; height: 50%;margin-top: 0.5%;"> 
+                                        </div>
+                                        <div style="width:90%;height: 1px;background-color: black; margin: 6% 5% 4% 5%;"></div>
+                                        <div style="height: 39%; display: flex; margin: 0px 10% 10px 10%; flex-direction: row; justify-content: space-around;">
+                                            <input type="button" value="直接購買" style="height: 60%; "class="button">
+                                            <input type="button" value="放入購物車" style="height: 60%;" class="button">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="col-12">
+                        <div class="card">
+                            <a Name="item1"></a>
+                            <img src="./img/items/法式巧克力.png" style="width: 100%;">
+                            <div class="row">
+                                <div class="col-md-12 col-lg-6">
+                                        <p style="font-size: 16px;margin: 0;"> 
+                                            夏先生把與青青在塞納河畔喝著左岸咖啡的美好灌注在蛋糕中，用巧克力代表著愛的心意，用玫瑰表達強烈不止的愛意，希望與所有人分享此時的喜悅。
+                                        </p>
+                                        <span style="color:#ffffff; font-size: 16px; font-weight: bold;">
+                                            <span style="background-color:#ff6600;">規格說明</span>
+                                        </span>
+                                        <p style="font-size: 16px; margin-top: 5px;">
+                                            ．蛋糕體:巧克力蛋糕
+                                        <br>
+                                            ．夾餡:蜜核桃、葡萄乾
+                                        <br>
+                                            ．保存期限:冷藏3天
+                                        <br>
+                                            ．葷素:蛋奶素
+                                        <br>
+                                            ．保存方式:冷藏
+                                        <br>
+                                            ．保存期限:冷藏3天內食用完畢
+                                        </p>
+                                </div>
+                                <div class="col-md-12 col-lg-6">
+                                    <div style="display: flex;flex-direction: column; padding-left: 3%;">
+                                        <div style="width:100%;height: 20%;display: flex;">
+                                            <p class ="itemPrice">單價</p>
+                                            <p style="margin:0;font-size: 16px;">$790</p>
+                                        </div>                    
+                                        <div style="width:100%;height: 20%;display: flex;">
+                                            <p class="itemPrice">蛋糕尺寸</p>
+                                            <form style="font-size: 16px;margin-top: 0.5%;">
+                                                <select name="Size" >
+                                                　<option value="8">8吋</option>
+                                                　<option value="10">10吋</option>
+                                                　<option value="12">12吋</option>
+                                                　<option value="14">14吋</option>
+                                                </select>
+                                            </form>
+                                        </div>
+                                        <div style="width:100%;height: 10%;display: flex;">
+                                            <p class="itemPrice">數量</p>
+                                            <input id="Num" type="number" name="Num" value="0" step="1" style="width:57.5%; height: 50%;margin-top: 0.5%;"> 
+                                        </div>
+                                        <div style="width:90%;height: 1px;background-color: black; margin: 6% 5% 4% 5%;"></div>
+                                        <div style="height: 39%; display: flex; margin: 0px 10% 10px 10%; flex-direction: row; justify-content: space-around;">
+                                            <input type="button" value="直接購買" style="height: 60%; "class="button">
+                                            <input type="button" value="放入購物車" style="height: 60%;" class="button">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
                 </div>
-                <div class = "product_items">
-                    <img src = "./img/items/法式巧克力.png" >
-                    <div style="display: flex; flex-direction:column;width:100%; margin-left:4%; ">
-                        <t2 class="product_title">法式巧克力French Choco</t2>
-                        <div class = "product_content" style="display: flex; flex-direction: row; height: 100%;">
-                            <div style="width: 50%;"> 
-                                <div style="height: 25%;">
-                                    <p style="font-size: 16px; width: 80%; margin: 0;"> 
-                                        夏先生把與青青在塞納河畔喝著左岸咖啡的美好灌注在蛋糕中，用巧克力代表著愛的心意，用玫瑰表達強烈不止的愛意，希望與所有人分享此時的喜悅。
-                                    </p>
-                                </div>
-                                <div style="height: 75%;">
-                                    <span style="color:#ffffff; font-size: 16px; font-weight: bold;">
-                                        <span style="background-color:#ff6600;">規格說明</span>
-                                    </span>
-                                    <p style="font-size: 16px; margin-top: 5px;">
-                                        ．蛋糕體:巧克力蛋糕
-                                    <br>
-                                        ．夾餡:蜜核桃、葡萄乾
-                                    <br>
-                                        ．保存期限:冷藏3天
-                                    <br>
-                                        ．葷素:蛋奶素
-                                    <br>
-                                        ．保存方式:冷藏
-                                    <br>
-                                        ．保存期限:冷藏3天內食用完畢
-                                    </p>
-                                </div>
-                            </div>
-                            <div style="width: 50%;display: flex;flex-direction: column;">
-                                <div style="width:100%;height: 20%;display: flex;">
-                                    <p style="margin:0;font-size: 16px;width: 16.7%;">單價</p>
-                                    <p style="margin:0;font-size: 16px;">$790</p>
-                                </div>                    
-                                <div style="width:100%;height: 20%;display: flex;">
-                                    <p style="margin:0;width: 20%;font-size: 16px;">蛋糕尺寸</p>
-                                    <form style="width:100%;font-size: 16px;margin-top: 0.5%;">
-                                        <select name="Size" style="width:70%;">
-                                            　<option value="8">8吋</option>
-                                            　<option value="10">10吋</option>
-                                            　<option value="12">12吋</option>
-                                            　<option value="14">14吋</option>
-                                        </select>
-                                    </form>
-                                </div>
-                                <div style="width:100%;height: 10%;display: flex;">
-                                    <p style="margin:0;width: 16.7%;font-size: 16px;">數量</p>
-                                    <input id="Num" type="number" name="Num" value="0" step="1" style="width:57.5%; height: 50%;margin-top: 0.5%;"> 
-                                </div>
-                                <div style="width:80%;height: 1px;background-color: black; margin-top: 6%; margin-bottom: 4%;"></div>
-                                <div style="width:100%;height: 39%; display: flex;">
-                                    <input type="button" value="直接購買" style="height: 60%; width: 30%; margin-top: 3%; margin-right: 20%;">
-                                    <input type="button" value="放入購物車" style="height: 60%; width: 30%; margin-top: 3%;">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-       </div>
-       
+        </div>
     </body>
+    <script src="js/jQuery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/Animation.js"></script>
 </html>

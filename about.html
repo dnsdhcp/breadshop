@@ -1,41 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./img/icon.ico" type="image/x-icon">
-    <title>青青烘焙坊</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/about.css">
-    <link rel="stylesheet" href="./css/header.css">
-
-
-    <header>
-        <div class=title>
-            <a href="./index.html"><img src="./img/title.png" class=img_title></a>
-        </div>
-        <ul>
-            <li><a href="./about.html">
-                    <p class="shopnamep b1">關於我們</p>
-                </a></li>
-            <li><a href="./items.html">
-                    <p class="shopnamep b2">門市商品</p>
-                </a></li>
-            <li><a href="./info.html">
-                    <p class="shopnamep b3">門市據點</p>
-                </a></li>
-            <li><a href="#">
-                    <p class="shopnamep b4">活動快訊</p>
-                </a></li>
-        </ul>
-        <div class=social>
-            <a href="https://www.instagram.com/?hl=zh-tw"><img src="./img/Instagram.png" class=social_image></a>
-            <a href="https://www.facebook.com/"><img src="./img/facebook.png" class=social_image></a>
-        </div>
-    </header>
-</head>
-
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>青青烘焙坊</title>
+        <link rel="icon" href="./img/icon.ico" type="image/x-icon" >
+        <link rel="stylesheet" type="text/css" href="./css/about.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="./css/header.css">
+        <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+        <button type="button" id="BackTop" style="display:scroll;position:fixed;bottom:10px;right:10px; z-index: 10;" href="#" title=""><i class="fas fa-arrow-up fa-3x"></i></button> 
+        <header >
+            <nav class="navbar navbar-expand-lg navbar-light " style="background-color:rgba(0,0,0);">
+                <a class="navbar-brand" href="./index.html"><img src="./img/title.png" alt=""></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="border-color: #F7F7F7;">
+                        <span class="navbar-toggler-icon" style="color:#F7F7F7;"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav navbar-flex" style="width: 100%;">
+                        <li class="nav-item"><a class="nav-link" href="./index.html" style="color:#F7F7F7">首頁</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./about.html" style="color:#F7F7F7">關於我們</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./items.html" style="color:#F7F7F7">門市商品</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./info.html" style="color:#F7F7F7">門市據點</a></li>
+                        </ul>
+                        <a href="https://www.facebook.com/"><i class="fab fa-facebook-square fa-3x social"></i></a>
+                        <a href="https://www.instagram.com/?hl=zh-tw"><i class="fab fa-instagram fa-3x"></i></a>
+                    </div>
+            </nav>
+            </div>
+        </header>
+    </head>
 <body>
     <div class=main_view>
         <img src="img/001-min.jpg" class=main_view_img>
@@ -84,7 +79,7 @@
         </div>
         <div class="row">
             <div class="col-md-6 col-sm-12">
-                <p style="font-size: 28px; margin-top: 5px;">
+                <p class="Award">
                     ．國立台北教育大學西點大賽第一名
                     <br>
                     ．臭狗西點大賽優勝
@@ -115,4 +110,7 @@
         </div>
     </div>
 </footer>
+<script src="js/jQuery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/Animation.js"></script>
 </html>

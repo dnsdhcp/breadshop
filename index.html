@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <meta charset="UTF-8">
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>青青烘焙坊</title>
         <link rel="icon" href="./img/icon.ico" type="image/x-icon" >
         <link rel="stylesheet" type="text/css" href="./css/style.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="./css/header.css">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+        <button type="button" id="BackTop" style="display:scroll;position:fixed;bottom:10px;right:10px; z-index: 10;" href="#" title=""><i class="fas fa-arrow-up fa-3x"></i></button> 
         <header >
             <nav class="navbar navbar-expand-lg navbar-light " style="background-color:rgba(0,0,0);">
-                <a class="navbar-brand" href="#"><img src="./img/title.png" alt=""></a>
+                <a class="navbar-brand" href="./index.html"><img src="./img/title.png" alt=""></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="border-color: #F7F7F7;">
-                        <span class="navbar-toggler-icon" style="color:#F7F7F7";"></span>
+                        <span class="navbar-toggler-icon" style="color:#F7F7F7;"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav navbar-flex" style="width: 100%;">
-                        <li class="nav-item"><a class="nav-link" href="#section1" style="color:#F7F7F7">關於我們</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#section1" style="color:#F7F7F7">門市商品</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#section1" style="color:#F7F7F7">門市據點</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#section1" style="color:#F7F7F7">活動快訊</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./index.html" style="color:#F7F7F7">首頁</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./about.html" style="color:#F7F7F7">關於我們</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./items.html" style="color:#F7F7F7">門市商品</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./info.html" style="color:#F7F7F7">門市據點</a></li>
                         </ul>
-                        <a href="https://www.facebook.com/"><i class="fab fa-facebook-square fa-3x social""></i></a>
+                        <a href="https://www.facebook.com/"><i class="fab fa-facebook-square fa-3x social"></i></a>
                         <a href="https://www.instagram.com/?hl=zh-tw"><i class="fab fa-instagram fa-3x"></i></a>
                     </div>
             </nav>
@@ -40,6 +42,12 @@
         </div> -->
         <div class="banner">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+              <img src="./img/icon.png" class=logo>
+              <div class=shopname>
+                  <strong><p  class="shopnamep slogan" style="font-size: 32px;font-weight: bolder;">青青麵包坊</p></strong>
+                  <p  class="shopnamep slogan" style="font-size: 32px;font-weight: bolder;">用心，帶給你最好的幸福</p>
+                  <p  class="shopnamep content "style="font-weight: bolder;">麵包唯一不可缺少的原物料，就是「感情」。所以夏先生不是在販賣麵包，而是在販賣幸福感情！<br>夏先生深信，如果品嚐到一個好吃的麵包、一個溫馨的蛋糕，那會是一件<br>快樂的事！除了滿足了您挑剔的嘴，更是溫暖你的心。讓我們創造更多人的幸福。</p>
+              </div>
               <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -68,7 +76,40 @@
               </a>
             </div>
         </div>
+        <div class="product" style="margin: 5%;">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <p class="title text-center title_text">店長推薦</p>
+                <hr class="title_line">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 col-lg-3">
+                <div class="card">
+                  <a href="./items.html#item1"><img src="./img/items/雪白彩果.png" style="width: 100%;"></a>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <div class="card">
+                  <a href="./items.html#item2"><img src="./img/items/玫瑰馨.png" style="width: 100%;"></a>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <div class="card">
+                  <a href="./items.html#item3"><img src="./img/items/夏日戀情.png" style="width: 100%;"></a>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <div class="card">
+                  <a href="./items.html#item5"><img src="./img/items/森林之吻.png" style="width: 100%;"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
     </body>
     <script src="js/jQuery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/Animation.js"></script>
 </html>

@@ -1,9 +1,5 @@
 body{
     padding:0px 0px 0px 0px;
-    font-size: 28px; 
-    min-width: 1500px;
-    width: auto;
-    min-height: 732px;
     margin: 0px;
     font-family: Arial, "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "Microsoft JhengHei", "맑은 고딕", sans-serif;
 }
@@ -20,61 +16,114 @@ body{
 }
 .main_view_img{
     width: 100vw;
-    min-width: 1520px;
     max-height: 100%;
 }
-.main_view_context{
+.main_view_context {
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 30px 0px;
+    padding: 0;
 }
-.main_view_context_title{
+
+.main_view_context_title {
     font-weight: bold;
-    margin-top: 52.5%;
+    margin-top:40%;
     margin-bottom: 0;
     font-size: 32px;
     line-height: 0px;
-    color:white;
+    color: white;
     font-family: Arial, "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "Microsoft JhengHei", "맑은 고딕", sans-serif;
 }
-.main_view_context_line{
+.main_view_context_line {
     width: 240px;
     height: 2px;
     background-color: white;
     margin-top: 10%;
     margin-bottom: 10px;
 }
+.card{
+    display: flex;
+    flex-direction: row !important;
+}
+@media (min-width: 320px) {
+    .main_view_context_title {
+        margin-top: 25%;
+        font-size: 18px;
+    }
+    .main_view_context_line{
+        width: 120px;
+    }
+    .main_body_cate_line{
+        width: 120px;
+        height: 1px;
+        background-color: gray;
+    }
+    .Award{
+        font-size: 16px; 
+        margin-top: 5px;
+    }
+    .disable{
+        display: none;
+    }
+}
+@media (min-width: 768px) {
+	.main_view_context_title {
+        margin-top: 40%;
+    font-size: 24px;
+    }
+    .main_view_context_line{
+        width: 180px;
+    }
+    .main_body_cate_line{
+        width: 180px;
+        height: 1px;
+        background-color: gray;
+    }
+    .Award{
+        font-size: 20px; 
+        line-height: 2.5rem;
+        margin-top: 5px;
+    }
+    .disable{
+        display: block;
+    }
+}
+@media (min-width: 1024px) {
+	.main_view_context_title {
+        margin-top: 40%;
+    font-size: 32px;
+    }
+    .main_view_context_line{
+        width: 240px;
+    }
+    .main_body_cate_line{
+        width: 180px;
+        height: 1px;
+        background-color: gray;
+    }
+    .Award{
+        font-size: 28px; 
+        margin-top: 5px;
+    }
+}
 .main_view_context_subtitle{
     color: white;
     font-size: 28px;
 }
 
-
-.main_body{
-    position: relative;
-    margin-top: 60px;
-    display: flex;
-    justify-content: flex-start;
-}
 .main_body_cate{
-    width: 250px;
+    width: 100%;
+    border-right: 1px solid gray;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-left: 150px;
 }
 .main_body_cate_title{
     font-size: 16px;
     padding: 5px 0px;
     color: black;
-}
-.main_body_cate_line{
-    width: 250px;
-    height: 1px;
-    background-color: gray;
 }
 .main_body_cate_sub{
     font-size: 16px;
@@ -90,17 +139,12 @@ body{
 }
 
 .main_body_store{
-    width: 920px;
-    height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
 .main_body_store_info{
-    width: 920px;
     height: 198px;
-    display: flex;
-    flex-direction: row;
 }
 .main_body_store_info_map{
     width: 250px;
@@ -108,7 +152,6 @@ body{
     margin: 10px 20px 29px 0px;
 }
 .main_body_store_info_adress{
-    width: 650px;
     height: 189px;
     padding: 2px;
 }
@@ -121,7 +164,6 @@ body{
     color: black;
 }
 .main_body_store_line{
-    width: 920px;
     height: 2px;
     background-color: gray;
     margin: 10px 0px 10px 0px;

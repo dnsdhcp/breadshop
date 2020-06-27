@@ -11,6 +11,7 @@
  *
  * Date: 2018-01-20T17:24Z
  */
+ 
 ( function( global, factory ) {
 
 	"use strict";
@@ -10218,8 +10219,6 @@ jQuery.fn.extend( {
 		return this.mouseenter( fnOver ).mouseleave( fnOut || fnOver );
 	}
 } );
-
-
 
 
 jQuery.fn.extend( {
