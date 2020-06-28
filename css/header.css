@@ -1,5 +1,5 @@
-html{
-    width: 100%;
+.carousel-inner{
+    overflow: visible;
 }
 .navbar-brand img {
 	height: 50px;
