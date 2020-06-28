@@ -15,6 +15,31 @@ body{
     align-items: center;
     padding-bottom: 3%;
 }
+.carousel-control-prev{
+    position: static !important;
+    color:black !important;
+    width: 100% !important;
+    opacity: 1 !important;
+}
+.carousel-control-next{
+    position: static !important;
+    color:black !important;
+    width: auto !important;
+}
+.carousel-indicators{
+    margin: 0 !important;
+    justify-content: start !important;
+    opacity:1 !important;
+}
+.carousel-indicators li{
+    width: auto !important;
+    padding: 0px !important;
+    height: auto !important;
+    
+}
+.tabs-button{
+    background-color: #FBB03B;
+}
 .main_view_img{
     width: 100vw;
     max-height: 100%;
@@ -110,15 +135,23 @@ hr{
 .button{
     font-size: 20px;
     font-family: Arial, "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "Microsoft JhengHei", "맑은 고딕", sans-serif;
+    background-color: #FBB03B;
+}
+.button:hover{
+    font-size: 20px;
+    font-family: Arial, "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "Microsoft JhengHei", "맑은 고딕", sans-serif;
+    background-color: gray;
 }
 @media (min-width: 320px) {
     .button{
         font-size: 16px;
+        background-color: #FBB03B;
     }
 }
 @media (min-width: 768px) {
     .button{
         font-size: 20px;
+        background-color: #FBB03B;
     }
 }
 

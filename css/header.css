@@ -10,6 +10,12 @@ html{
     font-family: Arial, "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "Microsoft JhengHei", "맑은 고딕", sans-serif;
     text-align: center;
 }
+.vertical-align {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
 @media (min-width: 320px) {
         .navbar-toggler-icon{
             width:30px!important;
@@ -18,7 +24,21 @@ html{
         .social{
             margin-right: 10px;
         }
+        a:hover{
+            background-color: gray;
+        }
     }
+@media(min-width: 768px) {
+    a:hover{
+        background-color: gray;
+    }
+}
+@media (min-width: 1024px)
+{
+    a:hover{
+        background-color: none;
+    }
+}
 .navbar-flex{
     display: flex;
     justify-content: space-around
