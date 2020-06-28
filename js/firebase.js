@@ -186,6 +186,7 @@ function clean()
                 console.log(querySnapshot)
             }
           });
+          setTimeout(()=>{window.location.reload("#")},1000);
     }
     else
     {window.alert("請先登入") }
