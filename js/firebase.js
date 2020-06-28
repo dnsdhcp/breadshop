@@ -24,45 +24,45 @@ function storedata(Num,Name,Price,img,tag,Size)
         var r=confirm("確定要購買\n"+$(Name).text()+"\n"+numElement.value+"個，共"+String(price*Number(numElement.value))+"元嗎");
         if (r==true)
         {
-                var ref = db.collection('Total').doc($(Name).text());
-                console.log(price);
-                ref.get().then(function(doc) {
-                    if (!doc.exists) {
-                        var size=document.getElementById(Size);
-                        ref.set(
-                            {
-                                Name : $(Name).text(),
-                                Total: Number(numElement.value),
-                                Price: Number(price)*Number(numElement.value),
-                                Image: $(img).attr("src"),
-                                Tag : tag,
-                                size_8: 0,
-                                size_10: 0,
-                                size_12: 0,
-                                size_14: 0,
-                        })
-                        if(size.value=="8")   ref.update({size_8: Number(numElement.value)})
-                        if(size.value=="10")  ref.update({size_10: Number(numElement.value)})
-                        if(size.value=="12")  ref.update({size_12: Number(numElement.value)})
-                        if(size.value=="14")  ref.update({size_14: Number(numElement.value)})
-                    }
-                    else{
-                        var num =doc.data().Total;
-                        var Price =doc.data().Price;
-                        var size=document.getElementById(Size);
-                        ref.update(
-                            {
-                                Total: Number(num)+Number(numElement.value),
-                                Price: (Number(price) * Number(numElement.value)) + Number(Price)
-                            }
-                            ).then(() => 
-                            {     console.log('set data successful');});
-                        if(size.value=="8")   ref.update({size_8: doc.data().size_8+Number(numElement.value)})
-                        if(size.value=="10")  ref.update({size_10: doc.data().size_10+Number(numElement.value)})
-                        if(size.value=="12")  ref.update({size_12: doc.data().size_12+Number(numElement.value)})
-                        if(size.value=="14")  ref.update({size_14: doc.data().size_14+Number(numElement.value)})
-                    }
-                });
+                // var ref = db.collection('Total').doc($(Name).text());
+                // console.log(price);
+                // ref.get().then(function(doc) {
+                //     if (!doc.exists) {
+                //         var size=document.getElementById(Size);
+                //         ref.set(
+                //             {
+                //                 Name : $(Name).text(),
+                //                 Total: Number(numElement.value),
+                //                 Price: Number(price)*Number(numElement.value),
+                //                 Image: $(img).attr("src"),
+                //                 Tag : tag,
+                //                 size_8: 0,
+                //                 size_10: 0,
+                //                 size_12: 0,
+                //                 size_14: 0,
+                //         })
+                //         if(size.value=="8")   ref.update({size_8: Number(numElement.value)})
+                //         if(size.value=="10")  ref.update({size_10: Number(numElement.value)})
+                //         if(size.value=="12")  ref.update({size_12: Number(numElement.value)})
+                //         if(size.value=="14")  ref.update({size_14: Number(numElement.value)})
+                //     }
+                //     else{
+                //         var num =doc.data().Total;
+                //         var Price =doc.data().Price;
+                //         var size=document.getElementById(Size);
+                //         ref.update(
+                //             {
+                //                 Total: Number(num)+Number(numElement.value),
+                //                 Price: (Number(price) * Number(numElement.value)) + Number(Price)
+                //             }
+                //             ).then(() => 
+                //             {     console.log('set data successful');});
+                //         if(size.value=="8")   ref.update({size_8: doc.data().size_8+Number(numElement.value)})
+                //         if(size.value=="10")  ref.update({size_10: doc.data().size_10+Number(numElement.value)})
+                //         if(size.value=="12")  ref.update({size_12: doc.data().size_12+Number(numElement.value)})
+                //         if(size.value=="14")  ref.update({size_14: doc.data().size_14+Number(numElement.value)})
+                //     }
+                // });
                 var ref2 = db.collection(allCookies).doc($(Name).text());
                     console.log(price);
                     ref2.get().then(function(doc) {
@@ -162,6 +162,23 @@ function buy(Num,Name,Price,img,tag,Size)
                     }
                 });
         }
+    }
+    else
+    {window.alert("請先登入") }
+}
+function clean()
+{
+    allCookies = document.cookie;
+    var Str=[];
+    if(allCookies!="null")
+    {
+        var ref = db.collection(allCookies)
+        ref.get().then(function(querySnapshot) {
+            querySnapshot.forEach(function(doc) {
+              Str.push(doc.data().Name);
+              console.log(Str.length);
+            });
+          });
     }
     else
     {window.alert("請先登入") }
