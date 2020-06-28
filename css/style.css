@@ -26,6 +26,9 @@ body{
     .shopname{
         display: none;
     }
+    .Runhorse{
+        display: none;
+    }
 }
 @media (min-width: 768px) {
     .logo{
@@ -45,6 +48,9 @@ body{
         z-index: 10;
         display: block;
     }
+    .Runhorse{
+        display: none;
+    }
 }
 @media (min-width: 1024px) {
     .logo{
@@ -63,4 +69,15 @@ body{
         text-align: center;
         z-index: 10;
     }
+    .Runhorse{
+        display: block;
+        position: absolute;
+        top: 50px;
+        z-index: 100;
+        color:white;
+        font-size: 28px;
+        line-height: 50px;
+        font-family: Arial, "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "Microsoft JhengHei", "맑은 고딕", sans-serif;
+        background-color: rgba(0, 0, 0, 0.5);
+    }   
 }

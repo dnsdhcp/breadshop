@@ -9,6 +9,10 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="./css/header.css">
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
+        <script src="js/firebase.js"></script>
         <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
         <button type="button" id="BackTop" style="display:scroll;position:fixed;bottom:10px;right:10px; z-index: 10;" href="#" title=""><i class="fas fa-arrow-up fa-3x"></i></button> 
         <header >
@@ -42,6 +46,7 @@
         </div> -->
         <div class="banner">
             <div id="carouselExampleIndicators" class="carousel slide">
+              <marquee class = "Runhorse" direction="right" height="50" scrollamount="10" behavior="scroll" loop="-1">賀!!慶祝創店一週紀念日</marquee>
               <img src="./img/icon.png" class=logo>
               <div class=shopname>
                   <strong><p  class="shopnamep slogan" style="font-size: 32px;font-weight: bolder;">青青麵包坊</p></strong>
@@ -87,22 +92,22 @@
             <div class="row">
               <div class="col-md-6 col-lg-3">
                 <div class="card">
-                  <a href="./items.html#item1"><img src="./img/items/雪白彩果.png" style="width: 100%;"></a>
+                  <a href="./items.html#item1" id="rank1"><img src="./img/items/雪白彩果.png" style="width: 100%;" id="rankimg1"></a>
                 </div>
               </div>
               <div class="col-md-6 col-lg-3">
                 <div class="card">
-                  <a href="./items.html#item2"><img src="./img/items/玫瑰馨.png" style="width: 100%;"></a>
+                  <a href="./items.html#item2" id="rank2"><img src="./img/items/玫瑰馨.png" style="width: 100%;" id="rankimg2"></a>
                 </div>
               </div>
               <div class="col-md-6 col-lg-3">
                 <div class="card">
-                  <a href="./items.html#item3"><img src="./img/items/夏日戀情.png" style="width: 100%;"></a>
+                  <a href="./items.html#item3" id="rank3"><img src="./img/items/夏日戀情.png" style="width: 100%;" id="rankimg3"></a>
                 </div>
               </div>
               <div class="col-md-6 col-lg-3">
                 <div class="card">
-                  <a href="./items.html#item5"><img src="./img/items/森林之吻.png" style="width: 100%;"></a>
+                  <a href="./items.html#item5" id="rank4"><img src="./img/items/森林之吻.png" style="width: 100%;" id="rankimg4"></a>
                 </div>
               </div>
             </div>
