@@ -169,16 +169,72 @@ function buy(Num,Name,Price,img,tag,Size)
 function clean()
 {
     allCookies = document.cookie;
-    var Str=[];
+    var Str=new Array();
     if(allCookies!="null")
     {
+        console.log(Str)
         var ref = db.collection(allCookies)
         ref.get().then(function(querySnapshot) {
             querySnapshot.forEach(function(doc) {
-              Str.push(doc.data().Name);
-              console.log(Str.length);
+                Str.push(doc.data().Name);
+                console.log(Str)
             });
+            for(var i=0;i<Str.length;i++) 
+            {
+                db.collection(allCookies).doc(Str[i]).delete();
+                console.log(Str[i])
+                console.log(querySnapshot)
+            }
           });
+    }
+    else
+    {window.alert("請先登入") }
+}
+function CheckOut()
+{
+    allCookies = document.cookie;
+    var Str=new Array();
+    if(allCookies!="null")
+    {
+        var ref = db.collection(allCookies)
+        ref.get().then(function(querySnapshot) { 
+            querySnapshot.forEach(function(doc) {
+                var ref2 = db.collection('Total').doc(doc.data().Name);
+                ref2.get().then(function(doc2) {
+                    if (!doc2.exists) {
+                            ref2.set(
+                                {
+                                    Name : doc.data().Name,
+                                    Total: doc.data().Total,
+                                    Price: doc.data().Price,
+                                    Image: doc.data().Image,
+                                    Tag : doc.data().Tag,
+                                    size_8: doc.data().size_8,
+                                    size_10: doc.data().size_10,
+                                    size_12: doc.data().size_12,
+                                    size_14: doc.data().size_14,
+                            })
+                        }
+                        else{
+                            var num =doc2.data().Total;
+                            var price =doc2.data().Price;
+                            ref2.update(
+                                {
+                                    Total: Number(num)+doc.data().Total,
+                                    Price: doc.data().Price + Number(price),
+                                    size_8: doc.data().size_8+doc2.data().size_8,
+                                    size_10: doc.data().size_10+doc2.data().size_10,
+                                    size_12: doc.data().size_12+doc2.data().size_12,
+                                    size_14: doc.data().size_14+doc2.data().size_14,
+                                }
+                                ).then(() => 
+                                {     console.log('set data successful');});
+                        }
+                    });
+                });
+            });
+        clean();
+        window.alert("購買成功")
     }
     else
     {window.alert("請先登入") }
@@ -245,6 +301,10 @@ window.onload=function (){
     allCookies = document.cookie;
     var ref = db.collection(allCookies);
     var i = 1;
+    for(var b = 1; b<= 11; b++)
+    {
+        $("#item" + String(b)).fadeOut('fast')
+    }
     ref.get().then(function(querySnapshot) {
         querySnapshot.forEach(function(doc) {
             // doc.data() is never undefined for query doc snapshots
@@ -262,18 +322,12 @@ window.onload=function (){
             }
             for(var a = 1 ; a <i; a++){
                 $("#item" + String(a)).fadeIn('fast')
+                console.log("111");
             }
         });
     })
     allCookies = document.cookie;
     console.log(allCookies);
-    if(allCookies =="null"){
-     for(var b = 1; b<= 11; b++)
-        {
-            $("#item" + String(b)).fadeOut('fast')
-        }
-    }
-    
     if(allCookies !="null") document.getElementById("login").innerHTML="登出";
     else document.getElementById("login").innerHTML="登入";
 }
