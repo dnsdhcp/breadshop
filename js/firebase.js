@@ -4,7 +4,7 @@ firebase.initializeApp(
     }
 );    
 var db = firebase.firestore();
-
+var allCookies
 function print_value(textview,Size,Price)
 {
     Size=Number(document.getElementById(Size).value)-8;
@@ -15,52 +15,94 @@ function print_value(textview,Size,Price)
 
 function storedata(Num,Name,Price,img,tag,Size)
 { 
-    const numElement = document.getElementById(Num);
-    var price = Number($(Price).text().slice(1));
-    var r=confirm("確定要購買\n"+$(Name).text()+"\n"+numElement.value+"個，共"+String(price*Number(numElement.value))+"元嗎");
-    if (r==true)
+    allCookies = document.cookie;
+    console.log(allCookies);
+    if(allCookies!=null)
     {
-            var ref = db.collection('fruit').doc($(Name).text());
-            console.log(price);
-            ref.get().then(function(doc) {
-                if (!doc.exists) {
-                    var size=document.getElementById(Size);
-                    ref.set(
-                        {
-                            Total: Number(numElement.value),
-                            Price: Number(price)*Number(numElement.value),
-                            Image: $(img).attr("src"),
-                            Tag : tag,
-                            size_8: 0,
-                            size_10: 0,
-                            size_12: 0,
-                            size_14: 0,
-                    })
-                    if(size.value=="8")   ref.update({size_8: Number(numElement.value)})
-                    if(size.value=="10")  ref.update({size_10: Number(numElement.value)})
-                    if(size.value=="12")  ref.update({size_12: Number(numElement.value)})
-                    if(size.value=="14")  ref.update({size_14: Number(numElement.value)})
-                }
-                else{
-                    var num =doc.data().Total;
-                    var Price =doc.data().Price;
-                    var size=document.getElementById(Size);
-                    ref.update(
-                        {
-                            Total: Number(num)+Number(numElement.value),
-                            Price: (Number(price) * Number(numElement.value)) + Number(Price)
+        const numElement = document.getElementById(Num);
+        var price = Number($(Price).text().slice(1));
+        var r=confirm("確定要購買\n"+$(Name).text()+"\n"+numElement.value+"個，共"+String(price*Number(numElement.value))+"元嗎");
+        if (r==true)
+        {
+                var ref = db.collection('Total').doc($(Name).text());
+                console.log(price);
+                ref.get().then(function(doc) {
+                    if (!doc.exists) {
+                        var size=document.getElementById(Size);
+                        ref.set(
+                            {
+                                Total: Number(numElement.value),
+                                Price: Number(price)*Number(numElement.value),
+                                Image: $(img).attr("src"),
+                                Tag : tag,
+                                size_8: 0,
+                                size_10: 0,
+                                size_12: 0,
+                                size_14: 0,
+                        })
+                        if(size.value=="8")   ref.update({size_8: Number(numElement.value)})
+                        if(size.value=="10")  ref.update({size_10: Number(numElement.value)})
+                        if(size.value=="12")  ref.update({size_12: Number(numElement.value)})
+                        if(size.value=="14")  ref.update({size_14: Number(numElement.value)})
+                    }
+                    else{
+                        var num =doc.data().Total;
+                        var Price =doc.data().Price;
+                        var size=document.getElementById(Size);
+                        ref.update(
+                            {
+                                Total: Number(num)+Number(numElement.value),
+                                Price: (Number(price) * Number(numElement.value)) + Number(Price)
+                            }
+                            ).then(() => 
+                            {     console.log('set data successful');});
+                        if(size.value=="8")   ref.update({size_8: doc.data().size_8+Number(numElement.value)})
+                        if(size.value=="10")  ref.update({size_10: doc.data().size_10+Number(numElement.value)})
+                        if(size.value=="12")  ref.update({size_12: doc.data().size_12+Number(numElement.value)})
+                        if(size.value=="14")  ref.update({size_14: doc.data().size_14+Number(numElement.value)})
+                    }
+                });
+                var ref2 = db.collection(allCookies).doc($(Name).text());
+                    console.log(price);
+                    ref2.get().then(function(doc) {
+                        if (!doc.exists) {
+                            var size=document.getElementById(Size);
+                            ref2.set(
+                                {
+                                    Total: Number(numElement.value),
+                                    Price: Number(price)*Number(numElement.value),
+                                    Image: $(img).attr("src"),
+                                    Tag : tag,
+                                    size_8: 0,
+                                    size_10: 0,
+                                    size_12: 0,
+                                    size_14: 0,
+                            })
+                            if(size.value=="8")   ref2.update({size_8: Number(numElement.value)})
+                            if(size.value=="10")  ref2.update({size_10: Number(numElement.value)})
+                            if(size.value=="12")  ref2.update({size_12: Number(numElement.value)})
+                            if(size.value=="14")  ref2.update({size_14: Number(numElement.value)})
                         }
-                        ).then(() => 
-                        {     console.log('set data successful');});
-                    if(size.value=="8")   ref.update({size_8: doc.data().size_8+Number(numElement.value)})
-                    if(size.value=="10")  ref.update({size_10: doc.data().size_10+Number(numElement.value)})
-                    if(size.value=="12")  ref.update({size_12: doc.data().size_12+Number(numElement.value)})
-                    if(size.value=="14")  ref.update({size_14: doc.data().size_14+Number(numElement.value)})
-                }
+                        else{
+                            var num =doc.data().Total;
+                            var Price =doc.data().Price;
+                            var size=document.getElementById(Size);
+                            ref2.update(
+                                {
+                                    Total: Number(num)+Number(numElement.value),
+                                    Price: (Number(price) * Number(numElement.value)) + Number(Price)
+                                }
+                                ).then(() => 
+                                {     console.log('set data successful');});
+                            if(size.value=="8")   ref2.update({size_8: doc.data().size_8+Number(numElement.value)})
+                            if(size.value=="10")  ref2.update({size_10: doc.data().size_10+Number(numElement.value)})
+                            if(size.value=="12")  ref2.update({size_12: doc.data().size_12+Number(numElement.value)})
+                            if(size.value=="14")  ref2.update({size_14: doc.data().size_14+Number(numElement.value)})
+                        }
 
-        });
+                });
+        }
     }
-
 }
 function user()
 {
@@ -76,7 +118,7 @@ function user()
             })
         }
         else{
-            r=confirm("已被註冊")
+            window.alert("已被註冊") 
         }
     });
 }
@@ -85,19 +127,25 @@ function login()
     var account = document.getElementById("account");
     var pwd = document.getElementById("pwd");
     var ref = db.collection('user').doc(account.value);
+
     ref.get().then(function(doc) {
-        if (!doc.exists) {
+        if (doc.exists) {
             var accountU =doc.data().account;
             var pwdU =doc.data().pwd;
-            // if(account.value)
+            if(String(account.value) == accountU && String(pwd.value) == pwdU) {
+                window.alert("登入成功") ;
+                document.cookie = account.value;
+                $("#popup").fadeOut('fast');
+            }
+            else window.alert("密碼錯誤") 
         }
         else{
-            r=confirm("帳號錯誤")
+            window.alert("帳號錯誤") 
         }
     });
 }
 window.onload=function (){
-    var ref = db.collection('fruit').orderBy("Price","desc").limit(4)
+    var ref = db.collection('Total').orderBy("Price","desc").limit(4)
     var i=1;
     ref.get().then(function(querySnapshot) {
         querySnapshot.forEach(function(doc) {
@@ -108,4 +156,32 @@ window.onload=function (){
             i++;
         });
     })
+    allCookies = document.cookie;
+    if(allCookies!=null) document.getElementById("login").innerHTML="登出";
 }
+$(function(){
+    allCookies = document.cookie;
+    if(document.cookie==null){
+    $("#login").click(function(){
+        $("#popup").fadeIn('fast')
+     })
+    $(".cross").click(function(){
+       $("#popup").fadeOut('fast')
+    })
+    $(".closebutton").click(function(){
+       $("#popup").fadeOut('fast')
+    })
+    $(".goquestion").click(function(){
+       $("#popup").fadeOut('fast')
+    })
+    }
+    else
+    {
+        $("#login").click(function(){
+            document.cookie = null;
+            allCookies = document.cookie;
+            window.alert("登出成功") ;
+            console.log(allCookies);
+         })
+    }
+});
