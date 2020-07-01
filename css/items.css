@@ -218,3 +218,57 @@ hr{
 p{
     font-family: Arial, "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "Microsoft JhengHei", "맑은 고딕", sans-serif;
 }
+.align-left{
+    text-align: left;
+}
+th{
+    color: #777;
+    background: #777;
+    padding: 12px;
+}
+.itemTitle{
+    width: 100% !important;
+}
+.itemTitle ul{
+    background-color: #eee;
+    text-align:justify !important;
+    padding: 12px;
+    padding-left: 0 !important;
+}
+.itemTitle li{
+    color: #777;
+    text-align:justify !important;
+    font-weight: bold;
+    padding-left: 2%;
+    display: inline-block;
+}
+ .trolley 
+{   
+    /* margin-top: 2%; */
+    width: 100% !important;
+}
+.trolley li{
+    width: 24%;
+    color: #777;
+    font-weight: bold;
+    padding-left: 2%;
+    display: inline-block;
+} 
+.trolleyItems{
+    margin-top: 2%;
+}
+.trolleyItems img{
+    width: 100%;
+}
+.trolleyItems ul{
+    text-align:justify !important;
+    padding: 12px;
+    padding-left: 0 !important;
+}
+.trolleyItems li{
+    width: 24%;
+    color: #777;
+    font-weight: bold;
+    padding-left: 2%;
+    display: inline-block;
+}

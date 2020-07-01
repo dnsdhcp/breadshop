@@ -31,6 +31,7 @@ function storedata(Num,Name,Price,img,tag,Size)
                         var size=document.getElementById(Size);
                         ref.set(
                             {
+                                Name : $(Name).text(),
                                 Total: Number(numElement.value),
                                 Price: Number(price)*Number(numElement.value),
                                 Image: $(img).attr("src"),
@@ -69,6 +70,7 @@ function storedata(Num,Name,Price,img,tag,Size)
                             var size=document.getElementById(Size);
                             ref2.set(
                                 {
+                                    Name : $(Name).text(),
                                     Total: Number(numElement.value),
                                     Price: Number(price)*Number(numElement.value),
                                     Image: $(img).attr("src"),
@@ -82,6 +84,7 @@ function storedata(Num,Name,Price,img,tag,Size)
                             if(size.value=="10")  ref2.update({size_10: Number(numElement.value)})
                             if(size.value=="12")  ref2.update({size_12: Number(numElement.value)})
                             if(size.value=="14")  ref2.update({size_14: Number(numElement.value)})
+                            console.log('加入購物車');
                         }
                         else{
                             var num =doc.data().Total;
@@ -93,13 +96,66 @@ function storedata(Num,Name,Price,img,tag,Size)
                                     Price: (Number(price) * Number(numElement.value)) + Number(Price)
                                 }
                                 ).then(() => 
-                                {     console.log('set data successful');});
+                                {     console.log('加入購物車');});
                             if(size.value=="8")   ref2.update({size_8: doc.data().size_8+Number(numElement.value)})
                             if(size.value=="10")  ref2.update({size_10: doc.data().size_10+Number(numElement.value)})
                             if(size.value=="12")  ref2.update({size_12: doc.data().size_12+Number(numElement.value)})
                             if(size.value=="14")  ref2.update({size_14: doc.data().size_14+Number(numElement.value)})
                         }
 
+                });
+        }
+    }
+}
+function buy(Num,Name,Price,img,tag,Size)
+{
+    allCookies = document.cookie;
+    console.log(allCookies);
+    if(allCookies!=null)
+    {
+        const numElement = document.getElementById(Num);
+        var price = Number($(Price).text().slice(1));
+        var r=confirm("確定要購買\n"+$(Name).text()+"\n"+numElement.value+"個，共"+String(price*Number(numElement.value))+"元嗎");
+        if (r==true)
+        {
+                var ref = db.collection('Total').doc($(Name).text());
+                console.log(price);
+                ref.get().then(function(doc) {
+                    if (!doc.exists) {
+                        var size=document.getElementById(Size);
+                        ref.set(
+                            {
+                                Name : $(Name).text(),
+                                Total: Number(numElement.value),
+                                Price: Number(price)*Number(numElement.value),
+                                Image: $(img).attr("src"),
+                                Tag : tag,
+                                size_8: 0,
+                                size_10: 0,
+                                size_12: 0,
+                                size_14: 0,
+                        })
+                        if(size.value=="8")   ref.update({size_8: Number(numElement.value)})
+                        if(size.value=="10")  ref.update({size_10: Number(numElement.value)})
+                        if(size.value=="12")  ref.update({size_12: Number(numElement.value)})
+                        if(size.value=="14")  ref.update({size_14: Number(numElement.value)})
+                    }
+                    else{
+                        var num =doc.data().Total;
+                        var Price =doc.data().Price;
+                        var size=document.getElementById(Size);
+                        ref.update(
+                            {
+                                Total: Number(num)+Number(numElement.value),
+                                Price: (Number(price) * Number(numElement.value)) + Number(Price)
+                            }
+                            ).then(() => 
+                            {     console.log('set data successful');});
+                        if(size.value=="8")   ref.update({size_8: doc.data().size_8+Number(numElement.value)})
+                        if(size.value=="10")  ref.update({size_10: doc.data().size_10+Number(numElement.value)})
+                        if(size.value=="12")  ref.update({size_12: doc.data().size_12+Number(numElement.value)})
+                        if(size.value=="14")  ref.update({size_14: doc.data().size_14+Number(numElement.value)})
+                    }
                 });
         }
     }
@@ -159,6 +215,42 @@ window.onload=function (){
     })
     allCookies = document.cookie;
     console.log(allCookies);
+    if(allCookies !="null") document.getElementById("login").innerHTML="登出";
+    else document.getElementById("login").innerHTML="登入";
+}
+window.onload=function (){
+    allCookies = document.cookie;
+    var ref = db.collection(allCookies);
+    var i = 1;
+    ref.get().then(function(querySnapshot) {
+        querySnapshot.forEach(function(doc) {
+            // doc.data() is never undefined for query doc snapshots
+            $("#product"+String(i)).attr("src",doc.data().Image);
+            document.getElementById("count" +String(i)).innerHTML = doc.data().Total;
+            document.getElementById("name" +String(i)).innerHTML = doc.data().Name;
+            document.getElementById("price" +String(i)).innerHTML = doc.data().Price;
+            // $("#rank"+String(i)).attr("href","./items.html#"+doc.data().Tag)
+            console.log(doc.data().Image);    
+            i++;
+            console.log(i);
+            var j = i;
+            for(;j<=11;j++){
+                $("#item" + String(j)).fadeOut('fast')
+            }
+            for(var a = 1 ; a <i; a++){
+                $("#item" + String(a)).fadeIn('fast')
+            }
+        });
+    })
+    allCookies = document.cookie;
+    console.log(allCookies);
+    if(allCookies =="null"){
+     for(var b = 1; b<= 11; b++)
+        {
+            $("#item" + String(b)).fadeOut('fast')
+        }
+    }
+    
     if(allCookies !="null") document.getElementById("login").innerHTML="登出";
     else document.getElementById("login").innerHTML="登入";
 }

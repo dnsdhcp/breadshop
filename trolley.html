@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>青青烘焙坊</title>
+        <link rel="icon" href="./img/icon.ico" type="image/x-icon" >
+        <link rel="stylesheet" type="text/css" href="./css/items.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="./css/header.css">
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
+        <script src="js/firebase.js"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+        <button type="button" id="BackTop" style="display:scroll;position:fixed;bottom:10px;right:10px; z-index: 10;" href="#" title=""><i class="fas fa-arrow-up fa-3x"></i></button> 
+        <div id="popup">
+          <span class="cross">X</span>
+          <form action="logcheck.php" method="post" class="container">
+            <input type="text" name="account" value="" placeholder="輸入帳號" class="input" id="account">
+            <input type="password" name="password" value="" placeholder="輸入密碼" class="input" id="pwd">
+            <div class="container" style="margin-bottom: 18px;">
+              <div class="row">
+                <div class="col-6 mr-auto">
+                  <input type="button" name="" value="登入" onclick="login()">
+                </div>
+                <div class="col-6">
+                  <input type="button" name="" value="註冊" onclick="user()">
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <header >
+            <nav class="navbar navbar-expand-lg navbar-light " style="background-color:rgba(0,0,0);">
+                <a class="navbar-brand" href="./index.html"><img src="./img/title.png" alt=""></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="border-color: #F7F7F7;">
+                        <span class="navbar-toggler-icon" style="color:#F7F7F7;"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav navbar-flex" style="width: 100%;">
+                        <li class="nav-item"><a class="nav-link" href="./index.html" style="color:#F7F7F7">首頁</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./about.html" style="color:#F7F7F7">關於我們</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./items.html" style="color:#F7F7F7">門市商品</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./info.html" style="color:#F7F7F7">門市據點</a></li>
+                        <li class="nav-item"></li><a class="nav-link" id="login" style="color:#F7F7F7">登入</a></il>
+                        </ul>
+                        <a href="./trolley.html"><i class="fas fa-shopping-cart fa-3x social"></i></a>
+                        <a href="https://www.facebook.com/"><i class="fab fa-facebook-square fa-3x social"></i></a>
+                        <a href="https://www.instagram.com/?hl=zh-tw"><i class="fab fa-instagram fa-3x"></i></a>
+                    </div>
+            </nav>
+            </div>
+        </header>
+    </head>
+    <body>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
+        <div class=main_view>
+            <img src="./img/001-min.jpg" class=main_view_img>
+            <div class=main_view_context>
+                <p class=main_view_context_title>蛋糕</p>
+                <div class=main_view_context_line></div>
+            </div>
+        </div>
+        <div class= container>
+            <div class="row">
+                <div class= broadcast >
+                    <p>根據不同的性質活動，提供豐富的點心餐盒，多種組合自由搭配，方便又美味！<br>
+                    我們提供多種餐盒選擇搭配，若需要客製化餐盒，請來電洽詢。<br></p>
+                    <strong>
+                        <span style="color: rgb(192, 80, 77); font-size: 16px;"> 
+                        <p>■訂購蛋糕、餐盒、酒會餐點街需三個工作天，餐盒內容依實際出餐內容為主，單筆訂單最多兩個組合。<br>
+                        ■因響應政府限塑政策，本公司將不另行附送塑膠提袋。<br>
+                        ■餐盒及酒會茶點無法網路下單，若有需求請聯繫取餐門市0934426549</p>
+                        </span>
+                    </strong>
+                </div>
+            </div>
+            <div class="row" style="padding: 0px !important; margin-top: 2%;border-width:2px;border-style:solid;border-color:#eee;padding:5px; ">
+                <div class="trolley itemTitle"  >
+                  <ul style="margin: 0px;">
+                      <li>商品</li>
+                      <li>商品名稱</li>
+                      <li>數量</li>
+                      <li>小計</li>
+                  </ul>
+                </div>
+                <div class="trolley trolleyItems" id ="item1">
+                    <ul class="">
+                        <li ><img id = "product1"src="img/items/夏季限定水果塔.jpg"></li>
+                        <li id = "name1"></li>
+                        <li id = "count1"></li>
+                        <li id ="price1"></li>
+                    </ul>
+                </div>
+                <div class="trolley trolleyItems" id ="item2">
+                    <ul class="">
+                        <li ><img id = "product2"src="img/items/夏季限定水果塔.jpg"></li>
+                        <li id = "name2"></li>
+                        <li id = "count2">數量</li>
+                        <li id ="price2"></li>
+                    </ul>
+                </div>
+                <div class="trolley trolleyItems" id ="item3">
+                    <ul class="">
+                        <li ><img id = "product3"src="img/items/夏季限定水果塔.jpg"></li>
+                        <li id = "name3"></li>
+                        <li id = "count3">數量</li>
+                        <li id ="price3"></li>
+                    </ul>
+                </div>
+                <div class="trolley trolleyItems" id ="item4">
+                    <ul class="">
+                        <li ><img id = "product4"src="img/items/夏季限定水果塔.jpg"></li>
+                        <li id = "name4"></li>
+                        <li id = "count4">數量</li>
+                        <li id ="price4"></li>
+                    </ul>
+                </div>
+                <div class="trolley trolleyItems" id ="item5">
+                    <ul class="">
+                        <li ><img id = "product5"src="img/items/夏季限定水果塔.jpg"></li>
+                        <li id = "name5"></li>
+                        <li id = "count5">數量</li>
+                        <li id ="price5"></li>
+                    </ul>
+                </div>
+
+                <div class="trolley trolleyItems" id ="item6">
+                    <ul class="">
+                        <li ><img id = "product6"src="img/items/夏季限定水果塔.jpg"></li>
+                        <li id = "name6"></li>
+                        <li id = "count6">數量</li>
+                        <li id ="price6"></li>
+                    </ul>
+                </div>
+                <div class="trolley trolleyItems" id ="item7">
+                    <ul class="">
+                        <li><img id = "product7" src="img/items/夏季限定水果塔.jpg"></li>
+                        <li id = "name7"></li>
+                        <li id = "count7">數量</li>
+                        <li id ="price7"></li>
+                    </ul>
+                </div>
+                <div class="trolley trolleyItems" id ="item8">
+                    <ul class="">
+                        <li ><img id = "product8" src="img/items/夏季限定水果塔.jpg"></li>
+                        <li id = "name8"></li>
+                        <li id = "count8">數量</li>
+                        <li id ="price8"></li>
+                    </ul>
+                </div>
+                <div class="trolley trolleyItems" id ="item9">
+                    <ul class="">
+                        <li ><img id = "product9" src="img/items/夏季限定水果塔.jpg"></li>
+                        <li id = "name9"></li>
+                        <li id = "count9">數量</li>
+                        <li id ="price9"></li>
+                    </ul>
+                </div>
+                <div class="trolley trolleyItems" id ="item10">
+                    <ul class="">
+                        <li ><img id = "product10"src="img/items/夏季限定水果塔.jpg"></li>
+                        <li id = "name10"></li>
+                        <li id = "count10">數量</li>
+                        <li id ="price10"></li>
+                    </ul>
+                </div>
+                <div class="trolley trolleyItems" id ="item11">
+                    <ul class="">
+                        <li ><img id = "product11"src="img/items/夏季限定水果塔.jpg"></li>
+                        <li id = "name11"></li>
+                        <li id = "count11">數量</li>
+                        <li id ="price11"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+    <footer>
+    </footer>
+    <script src="js/jQuery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/Animation.js"></script>
+</html>

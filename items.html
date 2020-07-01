@@ -45,6 +45,7 @@
                         <li class="nav-item"><a class="nav-link" href="./info.html" style="color:#F7F7F7">門市據點</a></li>
                         <li class="nav-item"></li><a class="nav-link" id="login" style="color:#F7F7F7">登入</a></il>
                         </ul>
+                        <a href="./trolley.html"><i class="fas fa-shopping-cart fa-3x social"></i></a>
                         <a href="https://www.facebook.com/"><i class="fab fa-facebook-square fa-3x social"></i></a>
                         <a href="https://www.instagram.com/?hl=zh-tw"><i class="fab fa-instagram fa-3x"></i></a>
                     </div>
@@ -146,8 +147,8 @@
                                                         </div>
                                                         <div style="width:90%;height: 1px;background-color: black; margin: 6% 5% 4% 5%;"></div>
                                                         <div style="height: 39%; display: flex; margin: 0px 10% 10px 10%; flex-direction: row; justify-content: space-around;">
-                                                            <input type="button" value="直接購買" style="height: 60%; "class="button" onclick="storedata('Num1','#Name1','#itemPrice','#img1','item1','Size')">
-                                                            <input type="button" value="放入購物車" style="height: 60%;" class="button">
+                                                            <input type="button" value="直接購買" style="height: 60%; "class="button"onclick="buy('Num1','#Name1','#itemPrice','#img1','item1','Size')">
+                                                            <input type="button" value="放入購物車" style="height: 60%;" class="button" onclick="storedata('Num1','#Name1','#itemPrice','#img1','item1','Size')">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -204,8 +205,8 @@
                                                         </div>
                                                         <div style="width:90%;height: 1px;background-color: black; margin: 6% 5% 4% 5%;"></div>
                                                         <div style="height: 39%; display: flex; margin: 0px 10% 10px 10%; flex-direction: row; justify-content: space-around;">
-                                                            <input type="button" value="直接購買" style="height: 60%; "class="button" onclick="storedata('Num2','#Name2','#itemPrice2','#img2','item2','Size2')">
-                                                            <input type="button" value="放入購物車" style="height: 60%;" class="button">
+                                                            <input type="button" value="直接購買" style="height: 60%; "class="button" onclick="buy('Num2','#Name2','#itemPrice2','#img2','item2','Size2')" >
+                                                            <input type="button" value="放入購物車" style="height: 60%;" class="button" onclick="storedata('Num2','#Name2','#itemPrice2','#img2','item2','Size2')">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -264,8 +265,8 @@
                                                         </div>
                                                         <div style="width:90%;height: 1px;background-color: black; margin: 6% 5% 4% 5%;"></div>
                                                         <div style="height: 39%; display: flex; margin: 0px 10% 10px 10%; flex-direction: row; justify-content: space-around;">
-                                                            <input type="button" value="直接購買" style="height: 60%; "class="button" onclick="storedata('Num3','#Name3','#itemPrice3','#img3','item3','Size3')">
-                                                            <input type="button" value="放入購物車" style="height: 60%;" class="button">
+                                                            <input type="button" value="直接購買" style="height: 60%; "class="button" onclick="buy('Num3','#Name3','#itemPrice3','#img3','item3','Size3')">
+                                                            <input type="button" value="放入購物車" style="height: 60%;" class="button" onclick="storedata('Num3','#Name3','#itemPrice3','#img3','item3','Size3')">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -324,8 +325,8 @@
                                                         </div>
                                                         <div style="width:90%;height: 1px;background-color: black; margin: 6% 5% 4% 5%;"></div>
                                                         <div style="height: 39%; display: flex; margin: 0px 10% 10px 10%; flex-direction: row; justify-content: space-around;">
-                                                            <input type="button" value="直接購買" style="height: 60%; "class="button" onclick="storedata('Num4','#Name4','#itemPrice4','#img4','item4','Size4')">
-                                                            <input type="button" value="放入購物車" style="height: 60%;" class="button">
+                                                            <input type="button" value="直接購買" style="height: 60%; "class="button" onclick="buy('Num4','#Name4','#itemPrice4','#img4','item4','Size4')">
+                                                            <input type="button" value="放入購物車" style="height: 60%;" class="button" onclick="storedata('Num4','#Name4','#itemPrice4','#img4','item4','Size4')">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -384,8 +385,8 @@
                                                         </div>
                                                         <div style="width:90%;height: 1px;background-color: black; margin: 6% 5% 4% 5%;"></div>
                                                         <div style="height: 39%; display: flex; margin: 0px 10% 10px 10%; flex-direction: row; justify-content: space-around;">
-                                                            <input type="button" value="直接購買" style="height: 60%; "class="button" onclick="storedata('Num5','#Name5','#itemPrice5','#img5','item5','Size5')">
-                                                            <input type="button" value="放入購物車" style="height: 60%;" class="button">
+                                                            <input type="button" value="直接購買" style="height: 60%; "class="button" onclick="buy('Num5','#Name5','#itemPrice5','#img5','item5','Size5')">
+                                                            <input type="button" value="放入購物車" style="height: 60%;" class="button" onclick="storedata('Num5','#Name5','#itemPrice5','#img5','item5','Size5')">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -444,8 +445,8 @@
                                                         </div>
                                                         <div style="width:90%;height: 1px;background-color: black; margin: 6% 5% 4% 5%;"></div>
                                                         <div style="height: 39%; display: flex; margin: 0px 10% 10px 10%; flex-direction: row; justify-content: space-around;">
-                                                            <input type="button" value="直接購買" style="height: 60%; "class="button" onclick="storedata('Num6','#Name6','#itemPrice6','#img6','item6','Size6')">
-                                                            <input type="button" value="放入購物車" style="height: 60%;" class="button">
+                                                            <input type="button" value="直接購買" style="height: 60%; "class="button" onclick="buy('Num6','#Name6','#itemPrice6','#img6','item6','Size6')">
+                                                            <input type="button" value="放入購物車" style="height: 60%;" class="button"onclick="storedata('Num6','#Name6','#itemPrice6','#img6','item6','Size6')">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -500,8 +501,8 @@
                                                         </div>
                                                         <div style="width:90%;height: 1px;background-color: black; margin: 6% 5% 4% 5%;"></div>
                                                         <div style="height: 39%; display: flex; margin: 0px 10% 10px 10%; flex-direction: row; justify-content: space-around;">
-                                                            <input type="button" value="直接購買" style="height: 60%; "class="button" onclick="storedata('Num7','#Name7','#itemPrice7','#img7','item7','Size')">
-                                                            <input type="button" value="放入購物車" style="height: 60%;" class="button">
+                                                            <input type="button" value="直接購買" style="height: 60%; "class="button" onclick="buy('Num7','#Name7','#itemPrice7','#img7','item7','Size')">
+                                                            <input type="button" value="放入購物車" style="height: 60%;" class="button" onclick="storedata('Num7','#Name7','#itemPrice7','#img7','item7','Size')">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -549,8 +550,8 @@
                                                         </div>
                                                         <div style="width:90%;height: 1px;background-color: black; margin: 6% 5% 4% 5%;"></div>
                                                         <div style="height: 39%; display: flex; margin: 0px 10% 10px 10%; flex-direction: row; justify-content: space-around;">
-                                                            <input type="button" value="直接購買" style="height: 60%; "class="button" onclick="storedata('Num8','#Name8','#itemPrice8','#img8','item8','Size')">
-                                                            <input type="button" value="放入購物車" style="height: 60%;" class="button">
+                                                            <input type="button" value="直接購買" style="height: 60%; "class="button" onclick="buy('Num8','#Name8','#itemPrice8','#img8','item8','Size')">
+                                                            <input type="button" value="放入購物車" style="height: 60%;" class="button" onclick="storedata('Num8','#Name8','#itemPrice8','#img8','item8','Size')">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -598,8 +599,8 @@
                                                         </div>
                                                         <div style="width:90%;height: 1px;background-color: black; margin: 6% 5% 4% 5%;"></div>
                                                         <div style="height: 39%; display: flex; margin: 0px 10% 10px 10%; flex-direction: row; justify-content: space-around;">
-                                                            <input type="button" value="直接購買" style="height: 60%; "class="button" onclick="storedata('Num9','#Name9','#itemPrice9','#img9','item9','Size')">
-                                                            <input type="button" value="放入購物車" style="height: 60%;" class="button">
+                                                            <input type="button" value="直接購買" style="height: 60%; "class="button" onclick="buy('Num9','#Name9','#itemPrice9','#img9','item9','Size')">
+                                                            <input type="button" value="放入購物車" style="height: 60%;" class="button" onclick="storedata('Num9','#Name9','#itemPrice9','#img9','item9','Size')">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -647,8 +648,8 @@
                                                         </div>
                                                         <div style="width:90%;height: 1px;background-color: black; margin: 6% 5% 4% 5%;"></div>
                                                         <div style="height: 39%; display: flex; margin: 0px 10% 10px 10%; flex-direction: row; justify-content: space-around;">
-                                                            <input type="button" value="直接購買" style="height: 60%; "class="button" onclick="storedata('Num10','#Name10','#itemPrice10','#img10','item10','Size')">
-                                                            <input type="button" value="放入購物車" style="height: 60%;" class="button">
+                                                            <input type="button" value="直接購買" style="height: 60%; "class="button" onclick="buy('Num10','#Name10','#itemPrice10','#img10','item10','Size')">
+                                                            <input type="button" value="放入購物車" style="height: 60%;" class="button" onclick="storedata('Num10','#Name10','#itemPrice10','#img10','item10','Size')">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -696,8 +697,8 @@
                                                         </div>
                                                         <div style="width:90%;height: 1px;background-color: black; margin: 6% 5% 4% 5%;"></div>
                                                         <div style="height: 39%; display: flex; margin: 0px 10% 10px 10%; flex-direction: row; justify-content: space-around;">
-                                                            <input type="button" value="直接購買" style="height: 60%; "class="button" onclick="storedata('Num11','#Name11','#itemPrice11','#img11','item11','Size')">
-                                                            <input type="button" value="放入購物車" style="height: 60%;" class="button">
+                                                            <input type="button" value="直接購買" style="height: 60%; "class="button" onclick="buy('Num11','#Name11','#itemPrice11','#img11','item11','Size')">
+                                                            <input type="button" value="放入購物車" style="height: 60%;" class="button" onclick="storedata('Num11','#Name11','#itemPrice11','#img11','item11','Size')">
                                                         </div>
                                                     </div>
                                                 </div>
