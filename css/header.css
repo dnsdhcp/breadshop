@@ -16,6 +16,7 @@
     align-items: center;
     justify-content: center;
   }
+
 @media (min-width: 320px) {
         .navbar-toggler-icon{
             width:30px!important;
@@ -27,16 +28,186 @@
         a:hover{
             background-color: gray;
         }
+        .input{
+            width:176px;
+        }
+        #popup{ /* 浮動視窗的css語法 */
+            font-size: 16px;
+            display: none;
+            background-color: #fffacd;
+            width: 220px;
+            padding: 15px 15px;
+            left: 45px;
+            bottom: 30px;
+            position: fixed;
+            z-index: 100;
+            -moz-box-shadow: -2px 3px 25px #a9a9a9;
+            -webkit-box-shadow: -2px 3px 25px #a9a9a9;
+            box-shadow: -2px 3px 25px #a9a9a9;
+        }
+        
+        .cross{ /* 浮動視窗的叉叉鍵 */
+            background-color: #fff;
+            margin-top:5px;
+            margin-right:5px;
+            margin-left:210px;
+            padding: 4px;
+            cursor: pointer;
+        }
+        
+        .cross:hover{ /* 滑鼠移到叉叉鍵的效果 */
+            background-color: #dcdcdc;
+        }
+        
+        .closebutton { /* 浮動視窗的取消鍵 */
+            display: inline-block;
+            background: #ffffff;
+            margin-left: 5px;
+            padding: 6px;
+            font-size: 18px;
+            letter-spacing: 0.1em;
+            cursor: pointer;
+        }
+        
+        .closebutton:hover{ /* 滑鼠移到取消鍵的效果 */
+            background-color: #dcdcdc;
+        }
+        
+        .goquestion{ /* 浮動視窗的填答鍵 */
+            display: inline-block;
+            background-color: #9fc5e8;
+            margin-left: 55px;
+            padding: 6px;
+            font-size: 18px;
+            letter-spacing: 0.2em;
+            font-weight: bold;
+            cursor: pointer;
+            float: right;
+        }
+        
+        .goquestion:hover{  /* 滑鼠移到填答鍵的效果 */
+            background-color: #6699cc;
+        }
+        
+        .goquestion a:link { /* 填答鍵的連結 */
+            color: #FFF;
+            text-decoration: none;
+        }
     }
 @media(min-width: 768px) {
     a:hover{
         background-color: gray;
+    }
+    .input{
+        margin-bottom: 30px;
+        width:300px;
+    }
+    #popup{ /* 浮動視窗的css語法 */
+        font-size: 16px;
+        display: none;
+        background-color: #fffacd;
+        width: 400px;
+        padding: 15px 15px;
+        left: 184px;
+        bottom: calc(50vh);
+        position: fixed;
+        z-index: 100000;
+        -moz-box-shadow: -2px 3px 25px #a9a9a9;
+        -webkit-box-shadow: -2px 3px 25px #a9a9a9;
+        box-shadow: -2px 3px 25px #a9a9a9;
+    }
+    .cross{ /* 浮動視窗的叉叉鍵 */
+        background-color: #fff;
+        margin-top:5px;
+        margin-right:5px;
+        margin-left:400px;
+        padding: 4px;
+        cursor: pointer;
+    }
+    
+    .cross:hover{ /* 滑鼠移到叉叉鍵的效果 */
+        background-color: #dcdcdc;
+    }
+    
+    .closebutton { /* 浮動視窗的取消鍵 */
+        display: inline-block;
+        background: #ffffff;
+        margin-left: 5px;
+        padding: 6px;
+        font-size: 18px;
+        letter-spacing: 0.1em;
+        cursor: pointer;
+    }
+    
+    .closebutton:hover{ /* 滑鼠移到取消鍵的效果 */
+        background-color: #dcdcdc;
+    }
+    
+    .goquestion{ /* 浮動視窗的填答鍵 */
+        display: inline-block;
+        background-color: #9fc5e8;
+        margin-left: 55px;
+        padding: 6px;
+        font-size: 18px;
+        letter-spacing: 0.2em;
+        font-weight: bold;
+        cursor: pointer;
+        float: right;
+    }
+    
+    .goquestion:hover{  /* 滑鼠移到填答鍵的效果 */
+        background-color: #6699cc;
+    }
+    
+    .goquestion a:link { /* 填答鍵的連結 */
+        color: #FFF;
+        text-decoration: none;
     }
 }
 @media (min-width: 1024px)
 {
     a:hover{
         background-color: none;
+    }
+    #popup{ /* 浮動視窗的css語法 */
+        font-size: 16px;
+        display: none;
+        background-color: #fffacd;
+        width: 400px;
+        padding: 15px 15px;
+        left: 312px;
+        bottom: calc(50vh);
+        position: fixed;
+        z-index: 100;
+        -moz-box-shadow: -2px 3px 25px #a9a9a9;
+        -webkit-box-shadow: -2px 3px 25px #a9a9a9;
+        box-shadow: -2px 3px 25px #a9a9a9;
+    }
+    .cross{ /* 浮動視窗的叉叉鍵 */
+        background-color: #fff;
+        margin-top:5px;
+        margin-right:5px;
+        margin-left:500px;
+        padding: 4px;
+        cursor: pointer;
+    }
+    
+    .cross:hover{ /* 滑鼠移到叉叉鍵的效果 */
+        background-color: #dcdcdc;
+    }
+    
+    .closebutton { /* 浮動視窗的取消鍵 */
+        display: inline-block;
+        background: #ffffff;
+        margin-left: 5px;
+        padding: 6px;
+        font-size: 18px;
+        letter-spacing: 0.1em;
+        cursor: pointer;
+    }
+    
+    .closebutton:hover{ /* 滑鼠移到取消鍵的效果 */
+        background-color: #dcdcdc;
     }
 }
 .navbar-flex{

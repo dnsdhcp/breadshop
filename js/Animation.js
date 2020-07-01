@@ -41,3 +41,17 @@ $(function(){
         $("#carouselExampleIndicators").carousel(2);
     });
 });
+$(function(){
+    $("#login").click(function(){
+        $("#popup").fadeIn('fast')
+     })
+    $(".cross").click(function(){
+       $("#popup").fadeOut('fast')
+    })
+    $(".closebutton").click(function(){
+       $("#popup").fadeOut('fast')
+    })
+    $(".goquestion").click(function(){
+       $("#popup").fadeOut('fast')
+    })
+    });
