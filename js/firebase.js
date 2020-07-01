@@ -17,7 +17,7 @@ function storedata(Num,Name,Price,img,tag,Size)
 { 
     allCookies = document.cookie;
     console.log(allCookies);
-    if(allCookies!=null)
+    if(allCookies!="null")
     {
         const numElement = document.getElementById(Num);
         var price = Number($(Price).text().slice(1));
@@ -84,7 +84,7 @@ function storedata(Num,Name,Price,img,tag,Size)
                             if(size.value=="10")  ref2.update({size_10: Number(numElement.value)})
                             if(size.value=="12")  ref2.update({size_12: Number(numElement.value)})
                             if(size.value=="14")  ref2.update({size_14: Number(numElement.value)})
-                            console.log('加入購物車');
+                            window.alert("加入購物車")
                         }
                         else{
                             var num =doc.data().Total;
@@ -96,7 +96,7 @@ function storedata(Num,Name,Price,img,tag,Size)
                                     Price: (Number(price) * Number(numElement.value)) + Number(Price)
                                 }
                                 ).then(() => 
-                                {     console.log('加入購物車');});
+                                {     window.alert("加入購物車") });
                             if(size.value=="8")   ref2.update({size_8: doc.data().size_8+Number(numElement.value)})
                             if(size.value=="10")  ref2.update({size_10: doc.data().size_10+Number(numElement.value)})
                             if(size.value=="12")  ref2.update({size_12: doc.data().size_12+Number(numElement.value)})
@@ -106,12 +106,16 @@ function storedata(Num,Name,Price,img,tag,Size)
                 });
         }
     }
+    else
+    {
+        window.alert("請先登入") 
+    }
 }
 function buy(Num,Name,Price,img,tag,Size)
 {
     allCookies = document.cookie;
     console.log(allCookies);
-    if(allCookies!=null)
+    if(allCookies!="null")
     {
         const numElement = document.getElementById(Num);
         var price = Number($(Price).text().slice(1));
@@ -159,6 +163,8 @@ function buy(Num,Name,Price,img,tag,Size)
                 });
         }
     }
+    else
+    {window.alert("請先登入") }
 }
 function user()
 {
@@ -254,6 +260,7 @@ window.onload=function (){
     if(allCookies !="null") document.getElementById("login").innerHTML="登出";
     else document.getElementById("login").innerHTML="登入";
 }
+
 $(function(){
     allCookies = document.cookie;
     if(document.cookie=="null"){
