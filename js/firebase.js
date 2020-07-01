@@ -136,6 +136,7 @@ function login()
                 window.alert("登入成功") ;
                 document.cookie = account.value;
                 $("#popup").fadeOut('fast');
+                window.location.reload("#");
             }
             else window.alert("密碼錯誤") 
         }
@@ -157,11 +158,13 @@ window.onload=function (){
         });
     })
     allCookies = document.cookie;
-    if(allCookies!=null) document.getElementById("login").innerHTML="登出";
+    console.log(allCookies);
+    if(allCookies !="null") document.getElementById("login").innerHTML="登出";
+    else document.getElementById("login").innerHTML="登入";
 }
 $(function(){
     allCookies = document.cookie;
-    if(document.cookie==null){
+    if(document.cookie=="null"){
     $("#login").click(function(){
         $("#popup").fadeIn('fast')
      })
@@ -178,10 +181,11 @@ $(function(){
     else
     {
         $("#login").click(function(){
-            document.cookie = null;
+            document.cookie = "null";
             allCookies = document.cookie;
             window.alert("登出成功") ;
             console.log(allCookies);
+            window.location.reload("#");
          })
     }
 });
