@@ -234,7 +234,7 @@ function CheckOut()
                     });
                 });
             });
-        clean();
+        setTimeout(()=>{clean();},1000);
         window.alert("購買成功")
     }
     else
