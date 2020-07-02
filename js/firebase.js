@@ -186,7 +186,7 @@ function clean()
                 console.log(querySnapshot)
             }
           });
-          setTimeout(()=>{window.location.reload("#")},1000);
+          setTimeout(()=>{window.location.reload("#");},2000);
     }
     else
     {window.alert("請先登入") }
@@ -234,7 +234,7 @@ function CheckOut()
                     });
                 });
             });
-        setTimeout(()=>{clean();},1000);
+        setTimeout(()=>{clean();},2000);
         window.alert("購買成功")
     }
     else
