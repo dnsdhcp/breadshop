@@ -40,7 +40,7 @@
             left: 45px;
             bottom: 30px;
             position: fixed;
-            z-index: 100;
+            z-index: 100000;
             -moz-box-shadow: -2px 3px 25px #a9a9a9;
             -webkit-box-shadow: -2px 3px 25px #a9a9a9;
             box-shadow: -2px 3px 25px #a9a9a9;
@@ -178,7 +178,7 @@
         left: 312px;
         bottom: calc(50vh);
         position: fixed;
-        z-index: 100;
+        z-index: 100000;
         -moz-box-shadow: -2px 3px 25px #a9a9a9;
         -webkit-box-shadow: -2px 3px 25px #a9a9a9;
         box-shadow: -2px 3px 25px #a9a9a9;

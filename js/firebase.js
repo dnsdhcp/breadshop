@@ -252,6 +252,7 @@ function user()
                     account: account.value,
                     pwd : pwd.value,
             })
+            window.alert("註冊成功");
         }
         else{
             window.alert("已被註冊") 
